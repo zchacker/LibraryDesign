@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 @media only screen and (max-width: 768px) {
-    .side_mobile{
+    .side_mobile {
         @apply fixed
     }
 }
@@ -138,30 +138,52 @@
 
 .table-container::-webkit-scrollbar {
     width: 10px;
-  }
-  
-  .table-container::-webkit-scrollbar-thumb {
+}
+
+.table-container::-webkit-scrollbar-thumb {
     background-color: #ccc;
     border-radius: 5px;
-  }
-  
-  .table-container::-webkit-scrollbar-track {
+}
+
+.table-container::-webkit-scrollbar-track {
     background-color: #eee;
-  }
-  .activeFillter{
+}
+
+.activeFillter {
     color: #008900;
-    border-color: #008900; 
- }
- 
- input {
-  accent-color: #008900;
- }
- #drop-zone {
-  border: 2px dashed #ccc;
-  padding: 20px;
-  text-align: center;
+    border-color: #008900;
+}
+
+input {
+    accent-color: #008900;
+}
+
+#drop-zone {
+    border: 2px dashed #ccc;
+    padding: 20px;
+    text-align: center;
 }
 
 #pdf-image {
-  margin-top: 20px;
+    margin-top: 20px;
+}
+
+
+.active {
+    background-color: #5F2263;
+    color: white;
+}
+
+.activeFillter {
+    color: #008900;
+    border-color: #008900;
+}
+
+.style {
+    z-index: 4;
+}
+
+.videoCss {
+    width: 300px;
+    border-radius: 20px;
 }

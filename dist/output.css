@@ -776,6 +776,10 @@ video {
   margin-right: 1rem;
 }
 
+.mt-8 {
+  margin-top: 2rem;
+}
+
 .block {
   display: block;
 }
@@ -1605,6 +1609,16 @@ video {
 .text-black-300 {
   --tw-text-opacity: 1;
   color: rgb(31 28 31 / var(--tw-text-opacity));
+}
+
+.text-blue {
+  --tw-text-opacity: 1;
+  color: rgb(2 31 185 / var(--tw-text-opacity));
+}
+
+.text-blue-light {
+  --tw-text-opacity: 1;
+  color: rgb(0 67 197 / var(--tw-text-opacity));
 }
 
 .opacity-0 {

@@ -202,26 +202,29 @@
             <div id="contantContainer"
                 class="flex w-full md:w-3/4 lg:w-4/5 justify-center pr-2 py-8 bg-white overflow-x-auto">
                 <div class="w-full sm:max-w-lg sm:p-8 p-2 shadow-xl rounded-lg">
-                    <form class="mt-0 space-y-6" id="supervisorForm" dir="rtl" lang="ar"
-                        onsubmit="supervisorHandleSubmit(event)">
+                    <form class="mt-0 space-y-6" id="studentsForm" dir="rtl" lang="ar"
+                        onsubmit="studentsHandleSubmit(event)">
                         <div class="flex flex-col items-center">
-                            <h1 class="text-purple-100 font-bold text-2xl">اضافة معلم</h1>
+                            <h1 class="text-purple-100 font-bold text-2xl">إضافة طالب</h1>
                         </div>
-                        <div class="-space-y-px">
-                            <div class="mb-4"><label for="SupervisorName" class="font-bold">أسم المعلم</label><input
-                                    type="text" id="SupervisorName" name="SupervisorName"
+                        <div class="-space-y-px ">
+                            <div class="mb-4"><label for="studentName" class="font-bold">أسم الطالب</label><input
+                                    type="text" id="studentName" name="studentName"
                                     class="mt-3 py-3 bg-gray-light t w-full rounded-md border-0 p-1.5 text-gray-900 ring-1 sm:text-sm sm:leading-6"
-                                    placeholder="أسم المعلم">
-                                <p id="SupervisorNameInputError" class="text-red-100 text-xs mt-1"></p>
+                                    placeholder="أسم الطالب">
+                                <p id="studentNameInputError" class="text-red-100 text-xs mt-1"></p>
                             </div>
-                            <div class="mb-4"><label for="userName" class="font-bold">البريد الالكتروني</label><input
-                                    type="text" id="userName" name="userName"
+                            <div class="mb-4"><label for="className" class="font-bold">رقم الهوية</label><input
+                                    type="text" id="classNameInput" name="classNameInput"
                                     class="mt-3 py-3 bg-gray-light t w-full rounded-md border-0 p-1.5 text-gray-900 ring-1 sm:text-sm sm:leading-6"
-                                    placeholder="البريد الالكتروني">
-                                <p id="userNameInputError" class="text-red-100 text-xs mt-1"></p>
-                            </div>
-                            <div class="mb-4">
+                                    placeholder="رقم الهوية">
                                 <p id="classNameInputError" class="text-red-100 text-xs mt-1"></p>
+                            </div>
+                            <div class="mb-4"><label for="studentId" class="font-bold">الصف</label><input type="text"
+                                    id="studentId" name="studentId"
+                                    class="mt-3 py-3 bg-gray-light t w-full rounded-md border-0 p-1.5 text-gray-900 ring-1 sm:text-sm sm:leading-6"
+                                    placeholder="الصف">
+                                <p id="studentIdError" class="text-red-100 text-xs mt-1"></p>
                             </div>
                             <div class="py-4 flex justify-center border-none"><button type="submit"
                                     class="bg-green text-white px-12 py-2 my-4 w-2/4 rounded-lg"

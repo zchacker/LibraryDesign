@@ -104,7 +104,20 @@
         </div>
     </div>
     <!-- END MODAL -->
-    <script src="./script.js"></script>
+    <script>
+        const modal = document.querySelector(".modal");
+        const closeIcon = document.querySelector(".closeIcon");
+        const forGetPassword = document.querySelector(".forGetPassword");
+
+        forGetPassword.addEventListener('click', () => {
+            modal.classList.remove("hidden");
+        });
+
+        closeIcon.addEventListener("click", () => {
+            modal.classList.add("hidden");
+        });
+        
+    </script>
 
 
 </body>

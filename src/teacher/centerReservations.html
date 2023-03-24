@@ -117,7 +117,7 @@
         </div>
 
         <!-- Main content area -->
-        <main class=" py-14 px-6 w-full mx-auto" dir="ltr" id="main_container">
+        <main class=" py-14 px-6 w-full mx-auto" dir="rtl" id="main_container">
 
             <div id="contantContainer"
                 class="block w-full justify-between md:justify-center lg:justify-center pr-2 overflow-x-auto">
@@ -217,21 +217,23 @@
                                     <p class="text-xl text-black-300 font-semibold mb-2">
                                         هل تريد حجز موعد في مركز ؟
                                     </p>
-                                    <p class="text-xl text-black-300 font-semibold mb-6">
-                                        ادخل الصف
-                                    </p>
+                                    
                                 </div>
-                                <form dir="rtl" action="" class="w-full mb-2 flex items-center justify-center mb-2">
-                                    <input type="text" name="className" id="className"
+                                <form dir="rtl" action="" class="w-full items-center justify-center mb-2">
+                                    <label class="text-xl text-black-300 font-semibold mb-6"> ادخل الصف</label>
+                                    <input type="text" name="className" id="className" placeholder="أدخل الصف"
                                         class="py-3 bg-gray-light t w-full rounded-md border-0 p-1.5 text-gray-900 ring-1 sm:text-sm sm:leading-6">
+                                        <label class="text-xl text-black-300 font-semibold mb-6"> ادخل الفصل</label>
+                                        <input type="text" name="className" id="className" placeholder="أدخل الفصل"
+                                            class="py-3 bg-gray-light t w-full rounded-md border-0 p-1.5 text-gray-900 ring-1 sm:text-sm sm:leading-6">
                                 </form>
                                 <div class="flex w-full justify-center gap-8">
                                     <button class="reject bg-light-gold text-white py-2 px-8 rounded-lg">
-                                        لا
+                                        تراجع
                                     </button>
-                                    <button class="accept bg-gold text-white py-2 px-8 rounded-lg">
-                                        نعم
-                                    </button>
+                                    <a href="#" class="accept bg-gold text-white py-2 px-8 rounded-lg">
+                                        تأكيد
+                                    </a>
                                 </div>
                             </div>
                         </div>

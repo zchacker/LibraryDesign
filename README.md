@@ -8,3 +8,5 @@
 
 ## About This project
 
+Kindly find the CSS files under /dist which called output.css
+and the HTML pages under /src

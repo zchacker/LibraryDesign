@@ -204,16 +204,20 @@
         <!-- Main content area -->
         <main class=" py-14 px-6 w-full mx-auto" dir="rtl" id="main_container">
 
-            <div class="flex flex-col items-center md:items-start" id="component1">
+            <div class="tools-bar md:flex justify-around h-[55px]">
+
                 <div class="flex justify-center flex-wrap flex-row w-full md:w-3/4 md:justify-between">
+
                     <!-- User Data -->
                     <div class="flex justify-center flex-wrap">
-                        <div id="buttonFetchTwo"
-                            class="m-2 py-1 px-10 sm:px-5 bg-dark-green flex justify-between rounded-lg text-white focus:outline-none focus:none mt-2">
-                            <button class="cursor-pointer p-1">رفع ملف الطالب</button></div>
                         <div id="buttonFetch"
                             class="m-2 py-1 px-10 sm:px-5 bg-dark-green flex justify-between rounded-lg text-white focus:outline-none focus:none mt-2 cursor-pointer">
-                            <button class="cursor-pointer p-1" id="addStudents">اضافة طالب</button></div>
+                            <a href="add_student.html" class="cursor-pointer p-1" id="addStudents">اضافة طالب</a>
+                        </div>
+                        <div id="buttonFetchTwo"
+                            class="m-2 py-1 px-10 sm:px-5 bg-dark-green flex justify-between rounded-lg text-white focus:outline-none focus:none mt-2">
+                            <a href="#" class="cursor-pointer p-1">رفع ملف الطالب</a>
+                        </div>                        
                     </div>
 
                     <!-- Search Input -->
@@ -223,11 +227,20 @@
                         <img class="m-2" src="../../assets/searchicon.png" alt="Search icon">
                     </div>
                     
-                </div>                
-            </div>
+                </div>  
+                
+                <select name="order_by" id="" class="bg-gray-200 mx-auto rounded-md px-6 h-10 my-4">
+                    <option value="1" selected disabled>ترتيب حسب</option>
+                    <option value="1">ترتيب حسب الفصول</option>
+                    <option value="1">ترتيب حسب الاسماء</option>
+                    <option value="1">ترتيب حسب الصفوف</option>
+                </select>
 
+            </div>
+            
             <div id="contantContainer"
-                class="flex w-full md:w-3/4 lg:w-4/5 justify-center  pr-2 w-full overflow-x-auto">
+                class="flex w-full md:w-3/4 lg:w-4/5 justify-center pr-2 overflow-x-auto">
+                
                 <div id="table-container">
                     <div class="container">
                         <table class="table-auto m-auto my-4">

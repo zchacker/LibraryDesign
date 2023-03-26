@@ -179,6 +179,22 @@
                     <li class="mb-4">
                         <div dir="rtl" class="border-gray-100 rounded-[16px] w-full">
                             <div class="colordTab py-0 px-0 bg-white rounded-2xl">
+                                <a href="support.html">
+                                    <button
+                                        class="font-semibold focus:outline-none text-right flex items-center py-1 pr-2 pl-6 text-sm">
+                                        <div
+                                            class="w-12 h-12 ml-2 rounded-full border-2 border-gray-200 bg-white flex items-center justify-center">
+                                            <img class="w-8 h-8" src="../../assets/customer-service.png" alt="Avatar">
+                                        </div>
+                                        الدعم الفني
+                                    </button>
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="mb-4">
+                        <div dir="rtl" class="border-gray-100 rounded-[16px] w-full">
+                            <div class="colordTab py-0 px-0 bg-white rounded-2xl">
                                 <button
                                     class="font-semibold focus:outline-none text-right flex items-center py-1 pr-2 pl-6 text-sm">
                                     <div
@@ -198,7 +214,7 @@
         <main class=" py-14 px-6 w-full mx-auto" dir="ltr" id="main_container">
 
             <div id="contantContainer"
-                class="flex justify-between md:justify-center lg:justify-center pr-2 w-full overflow-x-scroll">
+                class="flex justify-between md:justify-center lg:justify-center pr-2 w-full overflow-x-auto">
                 <div class="w-full sm:max-w-lg sm:p-8 shadow-xl rounded-lg">
                     <form class="mt-0 space-y-6" id="classRoomForm" dir="rtl" lang="ar"
                         onsubmit="classRoomHandleSubmit(event)">
@@ -206,21 +222,44 @@
                             <h1 class="text-purple-100 font-bold text-2xl">إضافة صف</h1>
                         </div>
                         <div class="-space-y-px rounded-md shadow-sm">
-                            <div class="mb-4"><label for="classRoomName" class="font-bold">اسم الصف</label><input
-                                    type="text" id="classRoomName" name="classRoomName"
-                                    class="mt-3 py-3 bg-gray-light t w-full rounded-md border-0 p-1.5 text-gray-900 ring-1 sm:text-sm sm:leading-6">
+                            <div class="mb-4"><label for="classRoomName" class="font-bold">اسم الصف</label>
+                                <select name="order_by" id="" class="bg-gray-200 w-full rounded-md px-6 h-10">
+                                    <option value="1" selected disabled>اختر الصف </option>
+                                    <option value="1">الأول</option>
+                                    <option value="2">الثاني</option>
+                                    <option value="3">الثالث</option>
+                                    <option value="4">الرابع</option>
+                                    <option value="5">الخامس</option>
+                                    <option value="6">السادس</option>
+                                    <option value="7">السابع</option>
+                                    <option value="8">الثامن</option>
+                                    <option value="9">التاسع</option>
+                                    <option value="10">العاشر</option>
+                                    <option value="11">الحادي عشر</option>
+                                    <option value="12">الثاني عشر</option>                                   
+                                </select>
                                 <p id="classRoomNameInputError" class="text-red-100 text-xs mt-1"></p>
                             </div>
-                            <div class="mb-4"><label for="className" class="font-bold">الفصل</label><input type="text"
-                                    id="className" name="className"
-                                    class="mt-3 py-3 bg-gray-light t w-full rounded-md border-0 p-1.5 text-gray-900 ring-1 sm:text-sm sm:leading-6">
+                            <div class="mb-4"><label for="className" class="font-bold">الفصل</label>
+                                <select name="order_by" id="" class="bg-gray-200 w-full rounded-md px-6 h-10">
+                                    <option value="1" selected disabled>اختر الصف </option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                    <option value="10">10</option>
+                                    <option value="11">11</option>
+                                    <option value="12">12</option>
+                                    <option value="13">13</option>
+                                    <option value="14">14</option>                                   
+                                </select>
                                 <p id="classNameInputError" class="text-red-100 text-xs mt-1"></p>
-                            </div>
-                            <div class="mb-4"><label for="classNumber" class="font-bold">رقم الصف</label><input
-                                    type="text" id="classNumber" name="classRoomNumber"
-                                    class="mt-3 py-3 bg-gray-light t w-full rounded-md border-0 p-1.5 text-gray-900 ring-1 sm:text-sm sm:leading-6">
-                                <p id="classNumberInputError" class="text-red-100 text-xs mt-1"></p>
-                            </div>
+                            </div>                            
                             <div class="mb-4"><label for="SupervisorName" class="font-bold">اسم المشرف</label><input
                                     type="text" id="SupervisorName" name="SupervisorName"
                                     class="mt-3 py-3 bg-gray-light t w-full rounded-md border-0 p-1.5 text-gray-900 ring-1 sm:text-sm sm:leading-6">

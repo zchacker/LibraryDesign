@@ -54,9 +54,11 @@
 
     <div class="flex items-start">
 
+
         <div
             class="right-side w-3/4 sm:w-3/5 md:w-1/2 lg:w-1/3 xl:w-1/4 2xl:w-1/6 sidebar h-screen z-30 md:z-30 bg-side-bar side_mobile hidden sm:hidden md:hidden lg:block top-0 bottom-0 right-0 overflow-y-auto gap-7 ">
             <!-- Sidebar content -->
+
             <nav class="navBarShow mt-4 block">
                 <ul class="mr-6 ml-6">
                     <li class="mb-4">
@@ -95,7 +97,7 @@
                     </li>
                     <li class="mb-4">
                         <div dir="rtl" class="border-gray-100 rounded-[16px] w-full">
-                            <div class="colordTab py-0 px-0 bg-white rounded-2xl active">
+                            <div class="colordTab py-0 px-0 bg-white rounded-2xl">
                                 <a href="activities.html">
                                     <button
                                         class="font-semibold focus:outline-none text-right flex items-center py-1 pr-2 pl-6 text-sm">
@@ -127,7 +129,7 @@
                     </li>
                     <li class="mb-4">
                         <div dir="rtl" class="border-gray-100 rounded-[16px] w-full">
-                            <div class="colordTab py-0 px-0 bg-white rounded-2xl">
+                            <div class="colordTab py-0 px-0 bg-white rounded-2xl active">
                                 <a href="support.html">
                                     <button
                                         class="font-semibold focus:outline-none text-right flex items-center py-1 pr-2 pl-6 text-sm">
@@ -157,83 +159,37 @@
                     </li>
                 </ul>
             </nav>
+
         </div>
 
         <!-- Main content area -->
-        <main class=" py-14 px-2 w-full mx-auto" dir="rtl" id="main_container">
+        <main class=" py-14 px-6 w-full mx-auto" dir="ltr" id="main_container">
 
-            
-            <div class="flex flex-wrap justify-center " id="videoTab" data-tab="tab2">
-
-                <div class="p-2 m-2 drop-shadow bg-white rounded-lg max-w-sm">
-                    <video
-                        src="../../assets/Document - Google Chrome 2023-03-07 23-42-36.mp4"
-                        class="object-cover videoCss"></video>
-                    <div class="flex justify-between">
-                        <h3 class="text-lg font-bold m-4 text-purple-800">عنوان الفيديو</h3>
-                        <div class="m-4">
-                            <span class="text-sm align-middle text-gray-400">500</span>
-                            <img src="../../assets/eye.png" class="w-4 h-4 inline-block mr-1 align-middle m-2">
-                        </div>                        
-                    </div>
-                    <div class="flex justify-between m-4">
-                        <p>تاريخ النشر</p>
-                        <p class="text-sm mt-1 font-medium">12/12/2022</p>
-                    </div>
-                    <img src="../../assets/paly.png" class="absolute top-1/3 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-                    <div class="flex justify-center gap-4">
-                        <a href="#" class="bg-green px-4 py-2 rounded-md text-white">تعديل</a>
-                        <a href="#" class="bg-red-600 px-4 py-2 rounded-md text-white" onclick="delete_video(id)">حذف</a>
-                    </div>
+            <div id="contantContainer"
+                class="flex w-full justify-between md:justify-center lg:justify-center pr-2 overflow-x-auto">
+                <div class="w-full sm:max-w-lg sm:p-8 shadow-xl rounded-lg">
+                    <form class="mt-0 space-y-6" id="supervisorForm" dir="rtl" lang="ar"
+                        onsubmit="support_sent(event)">
+                        
+                        <div class="-space-y-px rounded-md shadow-sm">
+                            <div class="mb-4"><label for="SupervisorName" class="font-bold">المشكلة</label>
+                                <input
+                                    type="text" id="SupervisorName" name="SupervisorName" placeholder="المشكلة"
+                                    class="mt-3 py-3 bg-gray-light t w-full rounded-md border-0 p-1.5 text-gray-900 ring-1 sm:text-sm sm:leading-6">
+                                <p id="SupervisorNameInputError" class="text-red-100 text-xs mt-1"></p>
+                            </div>
+                            <div class="mb-4">
+                                <label for="userName" class="font-bold">وصف المشكلة</label>
+                                <textarea name="" class="w-full bg-gray-light rounded-lg p-2" id="" cols="30" rows="10" placeholder="اكتب وصف المشكلة"></textarea>
+                                <p id="userNameInputError" class="text-red-100 text-xs mt-1"></p>
+                            </div>                            
+                            <div class="py-4 flex justify-center border-none">
+                                <button type="submit" class="bg-[#5F2263] text-white px-12 py-4 w-full my-4 rounded-lg" id="addButton">إرسال</button>
+                            </div>
+                        </div>
+                    </form>
                 </div>
-
-                <div class="p-2 m-2 drop-shadow bg-white rounded-lg max-w-sm">
-                    <video
-                        src="../../assets/Document - Google Chrome 2023-03-07 23-42-36.mp4"
-                        class="object-cover videoCss"></video>
-                    <div class="flex justify-between">
-                        <h3 class="text-lg font-bold m-4 text-purple-800">عنوان الفيديو</h3>
-                        <div class="m-4">
-                            <span class="text-sm align-middle text-gray-400">500</span>
-                            <img src="../../assets/eye.png" class="w-4 h-4 inline-block mr-1 align-middle m-2">
-                        </div>                        
-                    </div>
-                    <div class="flex justify-between m-4">
-                        <p>تاريخ النشر</p>
-                        <p class="text-sm mt-1 font-medium">12/12/2022</p>
-                    </div>
-                    <img src="../../assets/paly.png" class="absolute top-1/3 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-                    <div class="flex justify-center gap-4">
-                        <a href="#" class="bg-green px-4 py-2 rounded-md text-white">تعديل</a>
-                        <a href="#" class="bg-red-600 px-4 py-2 rounded-md text-white" onclick="delete_video(id)">حذف</a>
-                    </div>
-                </div>
-
-                <div class="p-2 m-2 drop-shadow bg-white rounded-lg max-w-sm">
-                    <video
-                        src="../../assets/Document - Google Chrome 2023-03-07 23-42-36.mp4"
-                        class="object-cover videoCss"></video>
-                    <div class="flex justify-between">
-                        <h3 class="text-lg font-bold m-4 text-purple-800">عنوان الفيديو</h3>
-                        <div class="m-4">
-                            <span class="text-sm align-middle text-gray-400">500</span>
-                            <img src="../../assets/eye.png" class="w-4 h-4 inline-block mr-1 align-middle m-2">
-                        </div>                        
-                    </div>
-                    <div class="flex justify-between m-4">
-                        <p>تاريخ النشر</p>
-                        <p class="text-sm mt-1 font-medium">12/12/2022</p>
-                    </div>
-                    <img src="../../assets/paly.png" class="absolute top-1/3 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-                    <div class="flex justify-center gap-4">
-                        <a href="#" class="bg-green px-4 py-2 rounded-md text-white">تعديل</a>
-                        <a href="#" class="bg-red-600 px-4 py-2 rounded-md text-white" onclick="delete_video(id)">حذف</a>
-                    </div>
-                </div>
-                
-                
             </div>
-            
 
         </main>
 
@@ -241,41 +197,32 @@
     </div>
 
 
-    <!-- modal -->
-
-    <div class="modal relative z-50 hidden" aria-labelledby="modal-title" role="dialog" aria-modal="true">
-        <div class="fixed inset-0 bg-black-light bg-opacity-75 transition-opacity"></div>
-  
-        <div class="fixed inset-0 z-60 overflow-y-auto">
-          <div class="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0">
-            <div class="relative transform overflow-hidden rounded-large bg-white text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-lg">
-              <div class="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
-                <div>
-                  <p class="closeIcon text-3xl text-blue-200 cursor-pointer">x</p>
-                  <div class="mt-3 text-center sm:mt-0 sm:ml-4 flex flex-col justify-center items-center">
-                    <img src="../../assets/person2.png" alt="">
-                    <div class="mt-2">
-                      <p class="text-xl text-black-300 font-semibold mb-2">
-                        هل أنت متاكد من الفديو ؟
-                      </p>
+        <!-- START MODAL -->
+        <div class="modal relative z-50 hidden" aria-labelledby="modal-title" role="dialog" aria-modal="true">
+            <div class="fixed inset-0 bg-black-light bg-opacity-75 transition-opacity"></div>
+    
+            <div class="fixed inset-0 z-60 overflow-y-auto">
+                <div
+                    class="flex justify-center items-center min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0">
+                    <div
+                        class="relative transform overflow-hidden rounded-large bg-white text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-lg">
+                        <div class="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
+                            <div>
+                                <p class="closeIcon text-3xl text-blue-200 cursor-pointer">x</p>
+                                <div class="mt-3 text-center sm:mt-0 sm:ml-4 flex flex-col justify-center items-center">
+                                    <img src="../../assets/Group support.png" alt="">
+                                    <h3 class="text-base font-semibold leading-6 text-black-200 text-xl my-4"
+                                        id="modal-title">
+                                        تم إرسال الطلب وهذا  رقم الطلب 13
+                                    </h3>                                    
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="flex w-full justify-center gap-8">
-                      <button class="reject bg-light-gold text-white py-2 px-8 rounded-lg">
-                        لا
-                      </button>
-                      <button class="accept bg-gold text-white py-2 px-8 rounded-lg">
-                        نعم
-                      </button>
-                    </div>
-                  </div>
                 </div>
-              </div>
             </div>
-          </div>
         </div>
-      </div>
-
-    <!-- end of modal  -->
+        <!-- END MODAL -->
 
     <img class="mx-auto h-200 w-200 absolute bottom-20 left-0 sm:bottom-0 md:bottom-0 -z-10"
         src="../../assets/Group 6.png" alt="hash">
@@ -291,34 +238,20 @@
 
     <script>
         const modal = document.querySelector(".modal");
-        const closeIcon = document.querySelector(".closeIcon");       
-        const reject = document.querySelector(".reject");
+        const closeIcon = document.querySelector(".closeIcon");
 
         closeIcon.addEventListener("click", () => {
             modal.classList.add("hidden");
         });
         
-        reject.addEventListener("click", () => {
-            modal.classList.add("hidden");
-        });
-
-        function delete_video(video_id)
+        function support_sent(event)
         {
+            event.preventDefault();
             modal.classList.remove("hidden");
+            return false;
         }
 
-    </script>
-
-    <img class="mx-auto h-200 w-200 absolute bottom-20 left-0 sm:bottom-0 md:bottom-0 -z-10"
-        src="../../assets/Group 6.png" alt="hash">
-
-    <script>
-        function openSidebar() {
-            document.querySelector(".sidebar").classList.toggle("hidden");
-            document.querySelector(".sidebar").classList.toggle("sm:hidden");
-            document.querySelector(".sidebar").classList.toggle("md:hidden");
-            document.querySelector(".overlay").classList.toggle("hidden");
-        }
+        
     </script>
 
 </body>

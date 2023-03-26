@@ -62,7 +62,7 @@
                     <li class="mb-4">
                         <div dir="rtl" class="border-gray-100 rounded-[16px] w-full">
                             <div class="colordTab py-0 px-0 bg-white rounded-2xl active">
-                                <a href="../LearningResourcesCenter/learningResourcesCenterTab.html">
+                                <a href="learningResourcesCenterTab.html">
                                     <button
                                         class="font-semibold focus:outline-none text-right flex items-center justify-between py-1 pr-2 pl-6 text-sm">
                                         <div
@@ -100,7 +100,7 @@
                     <li class="mb-4">
                         <div dir="rtl" class="border-gray-100 rounded-[16px] w-full">
                             <div class="colordTab py-0 px-0 bg-white rounded-2xl">
-                                <a href="../Users/userTab.html">
+                                <a href="userTab1.html">
                                     <button
                                         class="font-semibold focus:outline-none text-right flex items-center py-1 pr-2 pl-6 text-sm">
                                         <div
@@ -116,7 +116,7 @@
                     <li class="mb-4">
                         <div dir="rtl" class="border-gray-100 rounded-[16px] w-full">
                             <div class="colordTab py-0 px-0 bg-white rounded-2xl">
-                                <a href="../Activities/activities.html">
+                                <a href="activities.html">
                                     <button
                                         class="font-semibold focus:outline-none text-right flex items-center py-1 pr-2 pl-6 text-sm">
                                         <div
@@ -148,6 +148,22 @@
                     <li class="mb-4">
                         <div dir="rtl" class="border-gray-100 rounded-[16px] w-full">
                             <div class="colordTab py-0 px-0 bg-white rounded-2xl">
+                                <a href="support.html">
+                                    <button
+                                        class="font-semibold focus:outline-none text-right flex items-center py-1 pr-2 pl-6 text-sm">
+                                        <div
+                                            class="w-12 h-12 ml-2 rounded-full border-2 border-gray-200 bg-white flex items-center justify-center">
+                                            <img class="w-8 h-8" src="../../assets/customer-service.png" alt="Avatar">
+                                        </div>
+                                        الدعم الفني
+                                    </button>
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="mb-4">
+                        <div dir="rtl" class="border-gray-100 rounded-[16px] w-full">
+                            <div class="colordTab py-0 px-0 bg-white rounded-2xl">
                                 <button
                                     class="font-semibold focus:outline-none text-right flex items-center py-1 pr-2 pl-6 text-sm">
                                     <div
@@ -167,14 +183,18 @@
         <main class=" py-14 px-6 w-full mx-auto" dir="rtl" id="main_container">
 
             <div id="component1">
-                <div
-                    class="flex justify-between lg:justify-between flex-wrap md:justify-between sm:justify-center flex-row">
+                <div class="tools-bar flex justify-around">
                     <!-- User Data -->
-                    <div
-                        class="py-1 px-10 bg-white-100 whitespace-nowrap flex justify-between rounded-lg border-solid border-2 border-purple-light text-purple-light focus:outline-none focus:none">
-                        <img class="m-1" src="../../assets/fillter.png" alt="My Image">
-                        <p class="m-1 cursor-pointer">فرز حسب الفصول</p>
-                    </div>
+                    <select name="order_by" id="" class="bg-gray-200 rounded-md px-6 h-10">
+                        <option value="1" selected disabled>ترتيب حسب</option>
+                        <option value="1">ترتيب بحسب عنوان الكتاب</option>
+                        <option value="1">ترتيب بحسب القسم</option>
+                        <option value="1">ترتيب بحسب المؤلفين</option>
+                        <option value="1">ترتيب بحسب الصفحات</option>
+                        <option value="1">ترتيب بحسب نوع النسخة</option>
+                        <option value="1">ترتيب بحسب اللغة</option>
+                        <option value="1">ترتيب بحسب التقييم </option>
+                    </select>
 
                     <!-- Search Input -->
                     <div class="mt-2 border-2 border-gray-200 rounded-lg flex items-center">
@@ -197,11 +217,11 @@
                                     <th class="px-4 py-2">العنوان</th>
                                     <th class="px-4 py-2">القسم</th>
                                     <th class="px-4 py-2">اسم المؤلف</th>                                    
-                                    <th class="px-4 py-2">دار النشر</th>
-                                    <th class="px-4 py-2">اللغة</th>
-                                    <th class="px-4 py-2">رقم ردمك</th>
-                                    <th class="px-4 py-2">توفر النسخة</th>
                                     <th class="px-4 py-2">عدد الصفحات</th>
+                                    <th class="px-4 py-2">توفر النسخة</th>
+                                    <th class="px-4 py-2">رقم ردمك</th>
+                                    <th class="px-4 py-2">اللغة</th>
+                                    <th class="px-4 py-2">دار النشر</th>
                                     <th class="px-4 py-2">المشاهدات</th>
                                     <th class="px-4 py-2">التقييم</th>                                   
                                     <th class="px-4 py-2">العمليات</th>
@@ -211,13 +231,12 @@
                                 <tr class="text-center">
                                     <td class="border px-4 py-2 whitespace-nowrap text-base">الادب المعاصر</td>
                                     <td class="border px-4 py-2 whitespace-nowrap text-base">آدب</td>
-                                    <td class="border px-4 py-2 whitespace-nowrap text-base">حسن وشاح</td>
-                                    
-                                    <td class="border px-4 py-2 whitespace-nowrap text-base">سيبوية</td>
-                                    <td class="border px-4 py-2 whitespace-nowrap text-base">عربي</td>
-                                    <td class="border px-4 py-2 whitespace-nowrap text-base">ISBN548484845</td>
-                                    <td class="border px-4 py-2 whitespace-nowrap text-base">ورقي</td>
+                                    <td class="border px-4 py-2 whitespace-nowrap text-base">حسن وشاح</td>                                    
                                     <td class="border px-4 py-2 whitespace-nowrap text-base">100</td>
+                                    <td class="border px-4 py-2 whitespace-nowrap text-base">ورقي</td>
+                                    <td class="border px-4 py-2 whitespace-nowrap text-base">ISBN548484845</td>
+                                    <td class="border px-4 py-2 whitespace-nowrap text-base">عربي</td>
+                                    <td class="border px-4 py-2 whitespace-nowrap text-base">سيبوية</td>
                                     <td class="border px-4 py-2 whitespace-nowrap text-base">10000</td>
                                     <td class="border px-4 py-2 whitespace-nowrap text-base">5/5</td>
                                     
@@ -228,16 +247,17 @@
                                     </td>
                                 </tr>
                                 <tr class="text-center">
-                                    <td class="border px-4 py-2 whitespace-nowrap text-base">الفيزياء للعلماء والمهندسين</td>
-                                    <td class="border px-4 py-2 whitespace-nowrap text-base">علوم</td>
-                                    <td class="border px-4 py-2 whitespace-nowrap text-base">علي أحمد</td>                                    
-                                    <td class="border px-4 py-2 whitespace-nowrap text-base">مكتبة جرير</td>
+                                    <td class="border px-4 py-2 whitespace-nowrap text-base">الادب المعاصر</td>
+                                    <td class="border px-4 py-2 whitespace-nowrap text-base">آدب</td>
+                                    <td class="border px-4 py-2 whitespace-nowrap text-base">حسن وشاح</td>                                    
+                                    <td class="border px-4 py-2 whitespace-nowrap text-base">100</td>
+                                    <td class="border px-4 py-2 whitespace-nowrap text-base">ورقي</td>
+                                    <td class="border px-4 py-2 whitespace-nowrap text-base">ISBN548484845</td>
                                     <td class="border px-4 py-2 whitespace-nowrap text-base">عربي</td>
-                                    <td class="border px-4 py-2 whitespace-nowrap text-base">ISBN123456789</td>
-                                    <td class="border px-4 py-2 whitespace-nowrap text-base">الكتروني</td>
-                                    <td class="border px-4 py-2 whitespace-nowrap text-base">200</td>
-                                    <td class="border px-4 py-2 whitespace-nowrap text-base">5000</td>                                    
-                                    <td class="border px-4 py-2 whitespace-nowrap text-base">4/5</td>
+                                    <td class="border px-4 py-2 whitespace-nowrap text-base">سيبوية</td>
+                                    <td class="border px-4 py-2 whitespace-nowrap text-base">10000</td>
+                                    <td class="border px-4 py-2 whitespace-nowrap text-base">5/5</td>
+                                    
                                     <td class="border px-4 py-2 whitespace-nowrap text-base">
                                         <div class="flex"><button
                                                 class="bg-red-700 text-white py-1 px-2 rounded mx-1">حذف</button><button

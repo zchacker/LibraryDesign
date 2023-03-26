@@ -148,6 +148,22 @@
                     <li class="mb-4">
                         <div dir="rtl" class="border-gray-100 rounded-[16px] w-full">
                             <div class="colordTab py-0 px-0 bg-white rounded-2xl">
+                                <a href="support.html">
+                                    <button
+                                        class="font-semibold focus:outline-none text-right flex items-center py-1 pr-2 pl-6 text-sm">
+                                        <div
+                                            class="w-12 h-12 ml-2 rounded-full border-2 border-gray-200 bg-white flex items-center justify-center">
+                                            <img class="w-8 h-8" src="../../assets/customer-service.png" alt="Avatar">
+                                        </div>
+                                        الدعم الفني
+                                    </button>
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="mb-4">
+                        <div dir="rtl" class="border-gray-100 rounded-[16px] w-full">
+                            <div class="colordTab py-0 px-0 bg-white rounded-2xl">
                                 <button
                                     class="font-semibold focus:outline-none text-right flex items-center py-1 pr-2 pl-6 text-sm">
                                     <div
@@ -166,24 +182,26 @@
         <!-- Main content area -->
         <main class=" py-14 px-6 w-full mx-auto" dir="rtl" id="main_container">
 
-            <div id="component" class="">
-                <div class="flex flex-wrap flex-row w-3/4 justify-between">
+            <div id="component1">
+                <div class="tools-bar flex justify-around" >
+
+                    <div id="buttonFetch"></div>                    
+                    
+                    <!-- Search Input -->
+                    <div class="border-2 border-gray-200 rounded-lg flex items-center mt-2">
+                        <input dir="rtl" type="text" placeholder="أبحث هنا"
+                            class="pr-4 py-2 rounded-lg border-none focus:outline-none focus:border-blue-500 flex-1">
+                        <img class="m-2" src="../../assets/searchicon.png" alt="Search icon">
+                    </div>
+
                     <!-- User Data -->
-                    <div
-                        class="colordFillter mt-2 py-1 px-2 bg-white-100 flex justify-between rounded-lg border-solid border-2 border-purple-light text-purple-light focus:outline-none focus:none">
-                        <img class="m-1" src="../../assets/fillter.png" alt="My Image">
-                        <p class="m-1 cursor-pointer">فرز حسب الفصول</p>
-                    </div>
-                    <div
-                        class="colordFillter mt-2 py-1 px-2 bg-white-100 flex justify-between rounded-lg border-solid border-2 border-purple-light text-purple-light focus:outline-none focus:none">
-                        <img class="m-1" src="../../assets/fillter.png" alt="My Image">
-                        <p class="m-1 cursor-pointer">ترتيب حسب الصفوف</p>
-                    </div>
-                    <div
-                        class="colordFillter activeFillter mt-2 py-1 px-2 bg-white-100 flex justify-between rounded-lg border-solid border-2 border-purple-light text-purple-light focus:outline-none focus:none">
-                        <img class="m-1" src="../../assets/fillter.png" alt="My Image">
-                        <p class="m-1 cursor-pointer">ترتيب حسب الكتب المعتمدة</p>
-                    </div>
+                    <select name="order_by" id="" class="bg-gray-200 rounded-md px-6 h-10">
+                        <option value="1" selected disabled>ترتيب حسب</option>
+                        <option value="1">ترتيب بحسب الكتاب المعتمد</option>
+                        <option value="1">ترتيب بحسب الاسم</option>
+                        <option value="1">ترتيب بحسب الصف</option>
+                    </select>
+                    
                 </div>
             </div>
 
@@ -195,20 +213,18 @@
                             <thead>
                                 <tr class="bg-gray-200 text-center bg-purple-light text-white">
                                     <th class="px-4 py-2">اسم الطالب</th>
+                                    <th class="px-4 py-2">الصف</th>                                    
                                     <th class="px-4 py-2">الفصل</th>                                    
-                                    <th class="px-4 py-2">عدد الكتب المعتمدة</th>
-                                    <th class="px-4 py-2">معاينة صفحة الطالب</th>                                    
+                                    <th class="px-4 py-2">عدد الكتب المعتمدة</th>                                                                       
                                     <th class="px-4 py-2">العمليات</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr class="text-center">
                                     <td class="border px-4 py-2 whitespace-nowrap text-base">عمار</td>
-                                    <td class="border px-4 py-2 whitespace-nowrap text-base">1/ج</td>
-                                    
-                                    <td class="border px-4 py-2 whitespace-nowrap text-base">حسن وشاح</td>
-                                    <td class="border px-4 py-2 whitespace-nowrap text-base">20</td>
-                                    
+                                    <td class="border px-4 py-2 whitespace-nowrap text-base">الخامس</td>
+                                    <td class="border px-4 py-2 whitespace-nowrap text-base">1/ج</td>                                    
+                                    <td class="border px-4 py-2 whitespace-nowrap text-base">20</td>                                    
                                     <td class="border px-4 py-2 whitespace-nowrap text-base">
                                         <div class="flex"><button
                                                 class="bg-lime-600 text-white py-1 px-2 rounded mx-1">معاينة</button>
@@ -217,11 +233,9 @@
                                 </tr>
                                 <tr class="text-center">
                                     <td class="border px-4 py-2 whitespace-nowrap text-base">عمار</td>
-                                    <td class="border px-4 py-2 whitespace-nowrap text-base">1/ج</td>
-                                    
-                                    <td class="border px-4 py-2 whitespace-nowrap text-base">حسن وشاح</td>
-                                    <td class="border px-4 py-2 whitespace-nowrap text-base">20</td>
-                                    
+                                    <td class="border px-4 py-2 whitespace-nowrap text-base">الخامس</td>
+                                    <td class="border px-4 py-2 whitespace-nowrap text-base">1/ج</td>                                    
+                                    <td class="border px-4 py-2 whitespace-nowrap text-base">20</td>                                    
                                     <td class="border px-4 py-2 whitespace-nowrap text-base">
                                         <div class="flex"><button
                                                 class="bg-lime-600 text-white py-1 px-2 rounded mx-1">معاينة</button>
@@ -230,11 +244,9 @@
                                 </tr>
                                 <tr class="text-center">
                                     <td class="border px-4 py-2 whitespace-nowrap text-base">عمار</td>
-                                    <td class="border px-4 py-2 whitespace-nowrap text-base">1/ج</td>
-                                    
-                                    <td class="border px-4 py-2 whitespace-nowrap text-base">حسن وشاح</td>
-                                    <td class="border px-4 py-2 whitespace-nowrap text-base">20</td>
-                                    
+                                    <td class="border px-4 py-2 whitespace-nowrap text-base">الخامس</td>
+                                    <td class="border px-4 py-2 whitespace-nowrap text-base">1/ج</td>                                    
+                                    <td class="border px-4 py-2 whitespace-nowrap text-base">20</td>                                    
                                     <td class="border px-4 py-2 whitespace-nowrap text-base">
                                         <div class="flex"><button
                                                 class="bg-lime-600 text-white py-1 px-2 rounded mx-1">معاينة</button>
@@ -243,50 +255,9 @@
                                 </tr>
                                 <tr class="text-center">
                                     <td class="border px-4 py-2 whitespace-nowrap text-base">عمار</td>
-                                    <td class="border px-4 py-2 whitespace-nowrap text-base">1/ج</td>
-                                    
-                                    <td class="border px-4 py-2 whitespace-nowrap text-base">حسن وشاح</td>
-                                    <td class="border px-4 py-2 whitespace-nowrap text-base">20</td>
-                                    
-                                    <td class="border px-4 py-2 whitespace-nowrap text-base">
-                                        <div class="flex"><button
-                                                class="bg-lime-600 text-white py-1 px-2 rounded mx-1">معاينة</button>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr class="text-center">
-                                    <td class="border px-4 py-2 whitespace-nowrap text-base">عمار</td>
-                                    <td class="border px-4 py-2 whitespace-nowrap text-base">1/ج</td>
-                                    
-                                    <td class="border px-4 py-2 whitespace-nowrap text-base">حسن وشاح</td>
-                                    <td class="border px-4 py-2 whitespace-nowrap text-base">20</td>
-                                    
-                                    <td class="border px-4 py-2 whitespace-nowrap text-base">
-                                        <div class="flex"><button
-                                                class="bg-lime-600 text-white py-1 px-2 rounded mx-1">معاينة</button>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr class="text-center">
-                                    <td class="border px-4 py-2 whitespace-nowrap text-base">عمار</td>
-                                    <td class="border px-4 py-2 whitespace-nowrap text-base">1/ج</td>
-                                    
-                                    <td class="border px-4 py-2 whitespace-nowrap text-base">حسن وشاح</td>
-                                    <td class="border px-4 py-2 whitespace-nowrap text-base">20</td>
-                                    
-                                    <td class="border px-4 py-2 whitespace-nowrap text-base">
-                                        <div class="flex"><button
-                                                class="bg-lime-600 text-white py-1 px-2 rounded mx-1">معاينة</button>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr class="text-center">
-                                    <td class="border px-4 py-2 whitespace-nowrap text-base">عمار</td>
-                                    <td class="border px-4 py-2 whitespace-nowrap text-base">1/ج</td>
-                                    
-                                    <td class="border px-4 py-2 whitespace-nowrap text-base">حسن وشاح</td>
-                                    <td class="border px-4 py-2 whitespace-nowrap text-base">20</td>
-                                    
+                                    <td class="border px-4 py-2 whitespace-nowrap text-base">الخامس</td>
+                                    <td class="border px-4 py-2 whitespace-nowrap text-base">1/ج</td>                                    
+                                    <td class="border px-4 py-2 whitespace-nowrap text-base">20</td>                                    
                                     <td class="border px-4 py-2 whitespace-nowrap text-base">
                                         <div class="flex"><button
                                                 class="bg-lime-600 text-white py-1 px-2 rounded mx-1">معاينة</button>

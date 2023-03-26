@@ -183,9 +183,17 @@
         <main class=" py-14 px-6 w-full mx-auto" dir="rtl" id="main_container">
 
             <div id="component1">
-                <div class="tools-bar flex justify-around" >
+                <div class="tools-bar md:flex justify-around" >
 
                     <div id="buttonFetch"></div>                    
+                    
+                    <!-- User Data -->
+                    <select name="order_by" id="" class="bg-gray-200 rounded-md px-6 h-10">
+                        <option value="1" selected disabled>ترتيب حسب</option>
+                        <option value="1">ترتيب بحسب الكتاب المعتمد</option>
+                        <option value="1">ترتيب بحسب الاسم</option>
+                        <option value="1">ترتيب بحسب الصف</option>
+                    </select>
                     
                     <!-- Search Input -->
                     <div class="border-2 border-gray-200 rounded-lg flex items-center mt-2">
@@ -194,13 +202,7 @@
                         <img class="m-2" src="../../assets/searchicon.png" alt="Search icon">
                     </div>
 
-                    <!-- User Data -->
-                    <select name="order_by" id="" class="bg-gray-200 rounded-md px-6 h-10">
-                        <option value="1" selected disabled>ترتيب حسب</option>
-                        <option value="1">ترتيب بحسب الكتاب المعتمد</option>
-                        <option value="1">ترتيب بحسب الاسم</option>
-                        <option value="1">ترتيب بحسب الصف</option>
-                    </select>
+                    
                     
                 </div>
             </div>

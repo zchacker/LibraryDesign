@@ -214,24 +214,19 @@
         <main class=" py-14 px-6 w-full mx-auto" dir="rtl" id="main_container">
 
             <div id="component1" class="">
-                <div class="flex justify-between lg:justify-between flex-wrap md:justify-between sm:justify-center flex-row"
-                    style="width: 72%">
-                    <!-- User Data -->
-                    <div
-                        class="py-2 px-4 whitespace-nowrap bg-white-100 flex justify-between rounded-lg border-solid border-2 border-purple-light text-purple-light focus:outline-none focus:none">
-                        <img class="m-1" src="../../assets/fillter.png" alt="My Image">
-                        <p class="m-1 cursor-pointer">فرز حسب الفصول</p>
-                    </div>
+                <div class="tools-bar md:flex gap-4 justify-around" >                    
 
+                    <div id="buttonFetch"
+                        class="py-1 px-10 bg-dark-green flex justify-between rounded-lg text-white focus:outline-none focus:none mt-2 cursor-pointer">
+                        <button class="cursor-pointer p-1" id="addSeasons">اضافة فصل</button></div>
+                        
                     <!-- Search Input -->
                     <div class="border-2 border-gray-200 rounded-lg flex items-center mt-2">
                         <input dir="rtl" type="text" placeholder="أبحث عن كتابك هنا"
                             class="pr-4 py-2 rounded-lg border-none focus:outline-none focus:border-blue-500 flex-1">
                         <img class="m-2" src="../../assets/searchicon.png" alt="Search icon">
                     </div>
-                    <div id="buttonFetch"
-                        class="py-1 px-10 bg-dark-green flex justify-between rounded-lg text-white focus:outline-none focus:none mt-2 cursor-pointer">
-                        <button class="cursor-pointer p-1" id="addSeasons">اضافة فصل</button></div>
+                    
                 </div>
             </div>
 

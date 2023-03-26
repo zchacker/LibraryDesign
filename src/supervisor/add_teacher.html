@@ -15,17 +15,6 @@
 
     <header class="bg-white flex-wrap items-center justify-between mx-2 mb-2 rounded-b-2xl ">
         <div class="flex justify-between items-center mx-auto px-4 rounded-b-2xl w-full bg-purple-light">
-             <!-- Search Input -->
-             <div class="relative flex items-center">
-                <img src="../../assets/avtar.png" alt="My Image" class="h-10 w-10 rounded-full sm:mr-4 order-3">
-                <h1 class="text-white font-bold text-lg">عبد الله أحمد</h1>
-            </div>
-                    
-            <!-- Logo -->
-            <div class="flex items-center sm:ml-4">
-                <img src="../../assets/goldenlogo.png" alt="Logo" class="h-16 w-17">
-            </div>
-           
             <!-- User Data -->
             <div class="sm:flex flex items-end sm:items-center">
                 <div class="relative flex items-center order-2 sm:order-1">
@@ -37,6 +26,17 @@
                         </span>
                     </button>
                 </div>
+            </div>
+
+            <!-- Logo -->
+            <div class="flex items-center sm:ml-4">
+                <img src="../../assets/goldenlogo.png" alt="Logo" class="h-16 w-17">
+            </div>
+
+            <!-- Search Input -->
+            <div class="relative flex items-center">
+                <img src="../../assets/avtar.png" alt="My Image" class="h-10 w-10 rounded-full sm:mr-4 order-3">
+                <h1 class="text-white font-bold text-lg">عبد الله أحمد</h1>
             </div>
         </div>
         <div class="h-2 bg-purple-light mt-2"></div>
@@ -55,14 +55,51 @@
     <div class="flex items-start">
 
         <div
-        class="right-side w-3/4 sm:w-3/5 md:w-1/2 lg:w-1/3 xl:w-1/4 2xl:w-1/6 sidebar h-screen z-30 md:z-30 bg-side-bar side_mobile hidden sm:hidden md:hidden lg:block top-0 bottom-0 right-0 overflow-y-auto gap-7 ">
+            class="right-side w-4/6 sm:w-3/5 md:w-1/3 lg:w-1/6 sidebar h-screen z-30 md:z-30 bg-side-bar side_mobile hidden sm:hidden md:hidden lg:block top-0 bottom-0 right-0 overflow-y-auto gap-7 ">
             <!-- Sidebar content -->
-            <nav class="navBarShow mt-4 block">
+
+            <nav class="mt-4 block">
                 <ul class="mr-6 ml-6">
                     <li class="mb-4">
                         <div dir="rtl" class="border-gray-100 rounded-[16px] w-full">
-                            <div class="colordTab py-0 px-0 bg-white rounded-2xl">
-                                <a href="../LearningResourcesCenter/learningResourcesCenterTab.html">
+                            <div class="colordTab py-0 px-0 bg-white rounded-2xl active">
+                                <a href="users.html">
+                                    <button
+                                        class="font-semibold focus:outline-none text-right flex items-center py-1 pr-2 pl-6 text-sm">
+                                        <div
+                                            class="w-12 h-12 ml-2 rounded-full border-2 border-gray-200 bg-white flex items-center justify-center">
+                                            <img class="w-8 h-8" src="../../assets/activities.png" alt="Avatar">
+                                        </div>
+                                        المستخدمين
+                                    </button>
+                                </a>
+                            </div>
+                        </div>
+                        <div dir="rtl" class="ml-1 mr-0 mt-2">
+                            <a href="users.html" id="admin"
+                                class="coloredBut active w-44 bg-white font-semibold focus:outline-none text-right flex items-center py-1 pr-2 pl-6 text-sm rounded-[16px]">
+                                <div
+                                    class="w-10 h-10 ml-1 rounded-full border-2 border-gray-200 bg-white flex items-center justify-center">
+                                    <img class="w-6 h-6" src="../../assets/book-stack.png" alt="Avatar">
+                                </div>
+                                المعلمين
+                            </a>
+                        </div>
+                        <div dir="rtl" class="ml-1 mr-0 mt-2">
+                            <a href="students.html" id="students"
+                                class="coloredBut w-44 bg-white font-semibold focus:outline-none text-right flex items-center py-1 pr-2 pl-6 text-sm rounded-[16px]">
+                                <div
+                                    class="coloredBut w-10 h-10 ml-1 rounded-full border-2 border-gray-200 bg-white flex items-center justify-center">
+                                    <img class="w-6 h-6" src="../../assets/book-stack.png" alt="Avatar">
+                                </div>
+                                الطلاب
+                            </a>
+                        </div>
+                    </li>
+                    <li class="mb-4">
+                        <div dir="rtl" class="border-gray-100 rounded-[16px] w-full">
+                            <div class="colordTab py-0 px-0 bg-white rounded-2xl ">
+                                <a href="learningResourcesCenterTab.html">
                                     <button
                                         class="font-semibold focus:outline-none text-right flex items-center justify-between py-1 pr-2 pl-6 text-sm">
                                         <div
@@ -75,79 +112,32 @@
                                 </a>
                             </div>
                         </div>
-                    </li>
-                    <li class="mb-4">
-                        <div dir="rtl" class="border-gray-100 rounded-[16px] w-full">
-                            <div class="colordTab py-0 px-0 bg-white rounded-2xl active">
-                                <a href="../Users/userTab.html">
-                                    <button id="users"
-                                        class="font-semibold focus:outline-none text-right flex items-center py-1 pr-2 pl-6 text-sm">
-                                        <div
-                                            class="w-12 h-12 ml-2 rounded-full border-2 border-gray-200 bg-white flex items-center justify-center">
-                                            <img class="w-8 h-8" src="../../assets/activities.png" alt="Avatar">
-                                        </div>
-                                        المستخدمين
-                                        <img class="w-4 h-2 m-1" src="../../assets/dawnarrow.png" alt="Avatar">
-                                    </button>
-                                </a>
-                            </div>
-                        </div>
 
-                        <div dir="rtl" class="ml-1 mr-0 mt-2">
-                            <button id="admin"
+                        <div dir="rtl" class="ml-1 mr-0 mt-2 hidden">
+                            <a href="learningResourcesCenterTab" id="electronicLibrary"
+                                class="coloredBut active w-44 bg-white font-semibold focus:outline-none text-right flex items-center py-1 pr-2 pl-6 text-sm rounded-[16px]">
+                                <div
+                                    class="w-10 h-10 ml-1 rounded-full border-2 border-gray-200 bg-white flex items-center justify-center">
+                                    <img class="w-6 h-6" src="../../assets/book-stack.png" alt="Avatar">
+                                </div>
+                                المكتبة الالكترونة
+                            </a>
+                        </div>
+                        <div dir="rtl" class="ml-1 mr-0 mt-2 hidden">
+                            <a href="learningResourcesCenterTab2.html" id="centerWorks"
                                 class="coloredBut w-44 bg-white font-semibold focus:outline-none text-right flex items-center py-1 pr-2 pl-6 text-sm rounded-[16px]">
                                 <div
                                     class="w-10 h-10 ml-1 rounded-full border-2 border-gray-200 bg-white flex items-center justify-center">
                                     <img class="w-6 h-6" src="../../assets/book-stack.png" alt="Avatar">
                                 </div>
-                                المشرف
-                            </button>
-                        </div>
-                        <div dir="rtl" class="ml-1 mr-0 mt-2">
-                            <button id="students"
-                                class="coloredBut w-44 bg-white font-semibold focus:outline-none text-right flex items-center py-1 pr-2 pl-6 text-sm rounded-[16px]">
-                                <div
-                                    class="coloredBut w-10 h-10 ml-1 rounded-full border-2 border-gray-200 bg-white flex items-center justify-center">
-                                    <img class="w-6 h-6" src="../../assets/book-stack.png" alt="Avatar">
-                                </div>
-                                الطلاب
-                            </button>
-                        </div>
-                        <div dir="rtl" class="ml-1 mr-0 mt-2">
-                            <button id="teachers"
-                                class="coloredBut w-44 bg-white font-semibold focus:outline-none text-right flex items-center py-1 pr-2 pl-6 text-sm rounded-[16px]">
-                                <div
-                                    class="w-10 h-10 ml-1 rounded-full border-2 border-gray-200 bg-white flex items-center justify-center">
-                                    <img class="w-6 h-6" src="../../assets/book-stack.png" alt="Avatar">
-                                </div>
-                                المعلمين
-                            </button>
-                        </div>
-                        <div dir="rtl" class="ml-1 mr-0 mt-2">
-                            <button id="rows"
-                                class="coloredBut w-44 bg-white font-semibold focus:outline-none text-right flex items-center py-1 pr-2 pl-6 text-sm rounded-[16px] active">
-                                <div
-                                    class="w-10 h-10 ml-1 rounded-full border-2 border-gray-200 bg-white flex items-center justify-center">
-                                    <img class="w-6 h-6" src="../../assets/book-stack.png" alt="Avatar">
-                                </div>
-                                صفوف
-                            </button>
-                        </div>
-                        <div dir="rtl" class="ml-1 mr-0 mt-2">
-                            <button id="seasons"
-                                class="coloredBut w-44 bg-white font-semibold focus:outline-none text-right flex items-center py-1 pr-2 pl-6 text-sm rounded-[16px]">
-                                <div
-                                    class="w-10 h-10 ml-1 rounded-full border-2 border-gray-200 bg-white flex items-center justify-center">
-                                    <img class="w-6 h-6" src="../../assets/book-stack.png" alt="Avatar">
-                                </div>
-                                الفصول
-                            </button>
+                                اشغال المركز
+                            </a>
                         </div>
                     </li>
                     <li class="mb-4">
                         <div dir="rtl" class="border-gray-100 rounded-[16px] w-full">
                             <div class="colordTab py-0 px-0 bg-white rounded-2xl">
-                                <a href="../Activities/activities.html">
+                                <a href="activities.html">
                                     <button
                                         class="font-semibold focus:outline-none text-right flex items-center py-1 pr-2 pl-6 text-sm">
                                         <div
@@ -163,14 +153,14 @@
                     <li class="mb-4">
                         <div dir="rtl" class="border-gray-100 rounded-[16px] w-full">
                             <div class="colordTab py-0 px-0 bg-white rounded-2xl">
-                                <a href="../Statistics/statisticsTab.html">
+                                <a href="readingChallenge.html">
                                     <button
-                                        class="font-semibold focus:outline-none text-right flex items-center py-1 pr-2 pl-6 text-sm">
+                                        class="font-semibold focus:outline-none text-right flex items-center justify-between py-1 pr-2 pl-6 text-sm">
                                         <div
                                             class="w-12 h-12 ml-2 rounded-full border-2 border-gray-200 bg-white flex items-center justify-center">
-                                            <img class="w-8 h-8" src="../../assets/logout.png" alt="Avatar">
+                                            <img class="w-8 h-8" src="../../assets/activities.png" alt="Avatar">
                                         </div>
-                                        الاحصائيات
+                                        تحدي القراءة
                                     </button>
                                 </a>
                             </div>
@@ -179,14 +169,14 @@
                     <li class="mb-4">
                         <div dir="rtl" class="border-gray-100 rounded-[16px] w-full">
                             <div class="colordTab py-0 px-0 bg-white rounded-2xl">
-                                <a href="support.html">
+                                <a href="statisticsTab.html">
                                     <button
                                         class="font-semibold focus:outline-none text-right flex items-center py-1 pr-2 pl-6 text-sm">
                                         <div
                                             class="w-12 h-12 ml-2 rounded-full border-2 border-gray-200 bg-white flex items-center justify-center">
-                                            <img class="w-8 h-8" src="../../assets/customer-service.png" alt="Avatar">
+                                            <img class="w-8 h-8" src="../../assets/logout.png" alt="Avatar">
                                         </div>
-                                        الدعم الفني
+                                        الاحصائيات
                                     </button>
                                 </a>
                             </div>
@@ -208,66 +198,49 @@
                     </li>
                 </ul>
             </nav>
+
         </div>
 
         <!-- Main content area -->
-        <main class=" py-14 px-6 w-full mx-auto" dir="ltr" id="main_container">
+        <main class=" py-14 px-6 w-full mx-auto" dir="rtl" id="main_container">
 
             <div id="contantContainer"
-                class="flex w-full justify-between md:justify-center lg:justify-center py-2 overflow-x-auto">
-                <div class="w-full p-4 bg-white sm:max-w-lg sm:p-8 shadow-md rounded-lg">
+                class="flex w-full  justify-center pr-2 overflow-x-auto">
+                <div class="w-full sm:max-w-lg sm:p-8 shadow-xl rounded-lg">
                     <form class="mt-0 space-y-6" id="supervisorForm" dir="rtl" lang="ar"
-                        onsubmit="classRoomHandleSubmit(event)">
+                        onsubmit="supervisorHandleSubmit(event)">
                         <div class="flex flex-col items-center">
-                            <h1 class="text-purple-100 font-bold text-2xl">إضافة صف</h1>
+                            <h1 class="text-purple-100 font-bold text-2xl">اضافة معلم</h1>
                         </div>
                         <div class="-space-y-px rounded-md shadow-sm">
-                            <div class="mb-4"><label for="classRoomName" class="font-bold">اسم الصف</label>
-                                <select name="order_by" id="" class="bg-gray-200 w-full rounded-md px-6 h-10">
-                                    <option value="1" selected disabled>اختر الصف </option>
-                                    <option value="1">الأول</option>
-                                    <option value="2">الثاني</option>
-                                    <option value="3">الثالث</option>
-                                    <option value="4">الرابع</option>
-                                    <option value="5">الخامس</option>
-                                    <option value="6">السادس</option>
-                                    <option value="7">السابع</option>
-                                    <option value="8">الثامن</option>
-                                    <option value="9">التاسع</option>
-                                    <option value="10">العاشر</option>
-                                    <option value="11">الحادي عشر</option>
-                                    <option value="12">الثاني عشر</option>                                   
-                                </select>
-                                <p id="classRoomNameInputError" class="text-red-100 text-xs mt-1"></p>
-                            </div>
-                            <div class="mb-4"><label for="className" class="font-bold">الفصل</label>
-                                <select name="order_by" id="" class="bg-gray-200 w-full rounded-md px-6 h-10">
-                                    <option value="1" selected disabled>اختر الصف </option>
-                                    <option value="1">1</option>
-                                    <option value="2">2</option>
-                                    <option value="3">3</option>
-                                    <option value="4">4</option>
-                                    <option value="5">5</option>
-                                    <option value="6">6</option>
-                                    <option value="7">7</option>
-                                    <option value="8">8</option>
-                                    <option value="9">9</option>
-                                    <option value="10">10</option>
-                                    <option value="11">11</option>
-                                    <option value="12">12</option>
-                                    <option value="13">13</option>
-                                    <option value="14">14</option>                                   
-                                </select>
-                                <p id="classNameInputError" class="text-red-100 text-xs mt-1"></p>
-                            </div>                            
-                            <div class="mb-4"><label for="SupervisorName" class="font-bold">اسم المشرف</label><input
+                            <div class="mb-4"><label for="SupervisorName" class="font-bold">أسم المعلم</label><input
                                     type="text" id="SupervisorName" name="SupervisorName"
-                                    class="mt-3 py-3 bg-gray-light t w-full rounded-md border-0 p-1.5 text-gray-900 ring-1 sm:text-sm sm:leading-6">
-                                <p id="SupervisorNameError" class="text-red-100 text-xs mt-1"></p>
+                                    class="mt-3 py-3 bg-gray-light t w-full rounded-md border-0 p-1.5 text-gray-900 ring-1 sm:text-sm sm:leading-6"
+                                    placeholder="أسم المعلم">
+                                <p id="SupervisorNameInputError" class="text-red-100 text-xs mt-1"></p>
+                            </div>
+                            <div class="mb-4">
+                                <label for="userName" class="font-bold">اسم المستخدم </label>
+                                <input
+                                    type="text" id="userName" name="userName"
+                                    class="mt-3 py-3 bg-gray-light t w-full rounded-md border-0 p-1.5 text-gray-900 ring-1 sm:text-sm sm:leading-6"
+                                    placeholder="اسم المستخدم">
+                                <p id="userNameInputError" class="text-red-100 text-xs mt-1"></p>
+                            </div>
+                            <div class="mb-4">
+                                <label for="userName" class="font-bold">كلمة المرور </label>
+                                <input
+                                type="password" id="password" name="password"
+                                class="mt-3 py-3 bg-gray-light t w-full rounded-md border-0 p-1.5 text-gray-900 ring-1 sm:text-sm sm:leading-6"
+                                placeholder=" *******">
+                            <p id="userNameInputError" class="text-red-100 text-xs mt-1"></p>
+                        </div>
+                            <div class="mb-4">
+                                <p id="classNameInputError" class="text-red-100 text-xs mt-1"></p>
                             </div>
                             <div class="py-4 flex justify-center border-none"><button type="submit"
                                     class="bg-green text-white px-12 py-2 my-4 w-2/4 rounded-lg"
-                                    id="addButton">تعديل</button></div>
+                                    id="addButton">إضافة</button></div>
                         </div>
                     </form>
                 </div>

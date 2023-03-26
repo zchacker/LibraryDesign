@@ -162,35 +162,62 @@
         </div>
 
         <!-- Main content area -->
-        <main class=" py-14 px-6 w-full mx-auto" dir="ltr" id="main_container">
+        <main class=" py-14 px-6 w-full mx-auto" dir="rtl" id="main_container">
+
+            <div class="flex flex-wrap gap-4 justify-center my-12">
+                <div class="shadow-lg bg-white rounded-2xl text-center items-center justify-center grid grid-cols-1  p-12 px-16 h-[150px]">
+                    <h2 class="font-bold text-xl text-black">أشغال المركز </h2>
+                    <p>321323</p>
+                    <p>طالب و طالبة</p>
+                </div>
+
+                <div class="shadow-lg bg-white rounded-2xl text-center items-center justify-center grid grid-cols-1  p-12 px-16 h-[150px]">
+                    <h2 class="font-bold text-xl text-black">عدد المعلمين المتفاعلين</h2>
+                    <p>321323</p>
+                    <p>طالب و طالبة</p>
+                </div>
+
+                <div class="shadow-lg bg-white rounded-2xl text-center items-center justify-center grid grid-cols-1  p-12 px-16 h-[150px]">
+                    <h2 class="font-bold text-xl text-black">الزيارات للمنصة </h2>
+                    <p>321323</p>
+                    <p>زيارة للمنصة</p>
+                </div>
+
+                <div class="shadow-lg bg-white rounded-2xl text-center items-center justify-center grid grid-cols-1  p-12 px-16 h-[150px]">
+                    <h2 class="font-bold text-xl text-black">عدد الطلاب المتفاعلين </h2>
+                    <p>321323</p>
+                    <p>طالب و طالبة</p>
+                </div>                
+
+            </div>
 
             <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-            <div id="component4" class="flex flex-wrap justify-center gap-8">
+            <div id="component4" class="flex flex-wrap justify-center gap-8">                
+                <div style="max-width: 320px; max-height: 320px;" class="flex flex-col items-center">
+                    <canvas width="320" height="320" id="requested_borrow_books"
+                        style="display: block; box-sizing: border-box; height: 320px; width: 320px;"></canvas>
+                        <p class="text-chart-gray font-semibold">الفصول اكثر تفاعل بالمنصة</p>
+                </div>
+                <div style="max-width: 320px; max-height: 320px;" class="flex flex-col items-center">
+                    <canvas
+                        style="max-width: 320px; display: block; box-sizing: border-box; height: 320px; width: 300px;"
+                        height="320" id="platform__Interactions" width="300"></canvas>
+                    <p class="text-chart-gray font-semibold">عدد الكتب المقراءة</p>
+                </div>                
                 <div style="max-width: 320px; max-height: 320px;" class="flex flex-col items-center">
                     <canvas id="myChart" width="300" height="300"
                         style="display: block; box-sizing: border-box; height: 300px; width: 300px;"></canvas>
                     <p class="text-chart-gray font-semibold">الكتب المرفوعة بتصنيفاتها</p>
                 </div>
                 <div style="max-width: 320px; max-height: 320px;" class="flex flex-col items-center">
-                    <canvas
-                        style="max-width: 320px; display: block; box-sizing: border-box; height: 320px; width: 300px;"
-                        height="320" id="platform__Interactions" width="300"></canvas>
-                    <p class="text-chart-gray font-semibold">عدد التفاعل في المنصة </p>
-                </div>
-                <div style="max-width: 320px; max-height: 320px;" class="flex flex-col items-center">
-                    <canvas width="320" height="320" id="requested_borrow_books"
-                        style="display: block; box-sizing: border-box; height: 320px; width: 320px;"></canvas>
-                    <p class="text-chart-gray font-semibold">الفصول اكثر طلباً لاستعارة الكتب</p>
-                </div>
-                <div style="max-width: 320px; max-height: 320px;" class="flex flex-col items-center">
                     <canvas width="320" height="320" id="visit_stats"
                         style="display: block; box-sizing: border-box; height: 320px; width: 320px;"></canvas>
-                    <p class="text-chart-gray font-semibold">احصائيات الزيارات</p>
+                    <p class="text-chart-gray font-semibold">عدد مشاهدات المنصة</p>
                 </div>
                 <div style="max-width: 320px; max-height: 320px;" class="flex flex-col items-center">
                     <canvas width="320" height="320" id="student_visits"
                         style="display: block; box-sizing: border-box; height: 320px; width: 320px;"></canvas>
-                    <p class="text-chart-gray font-semibold">عدد زيارات الطلاب</p>
+                    <p class="text-chart-gray font-semibold">عدد الملخصات المعتمدة</p>
                 </div>
             </div>
 
@@ -264,7 +291,7 @@
                 labels: ['', '', '', '', ''],
                 datasets: [
                     {
-                        label: 'معلمين',
+                        label: 'مقروءة',
                         data: teacherData,
                         backgroundColor: '#03DAC5',
                         borderColor: '#03DAC5',
@@ -275,7 +302,7 @@
 
                     },
                     {
-                        label: 'طــلاب',
+                        label: 'غير مقروءة',
                         data: studentData,
                         backgroundColor: '#6200EE',
                         borderColor: '#6200EE',
@@ -373,7 +400,7 @@
                 labels: ['', '', '', '', ''],
                 datasets: [
                     {
-                        label: 'الاعدادية',
+                        label: '',
                         data: PrimaryVisitsData,
                         backgroundColor: '#BB86FC',
                         borderColor: '#BB86FC',
@@ -384,7 +411,7 @@
 
                     },
                     {
-                        label: 'الابتدائية',
+                        label: '',
                         data: preparatoryVisitsData,
                         backgroundColor: '#6200EE',
                         borderColor: '#6200EE',
@@ -428,7 +455,7 @@
                 labels: ['', '', '', '', ''],
                 datasets: [
                     {
-                        label: 'الاعدادية',
+                        label: 'المعتمدة',
                         data: PrimaryStudentVisitsData,
                         backgroundColor: '#5F2263',
                         borderColor: '#5F2263',
@@ -439,7 +466,7 @@
 
                     },
                     {
-                        label: 'الابتدائية',
+                        label: 'غير المعتمدة',
                         data: preparatoryStudentVisitsData,
                         backgroundColor: '#6200EE',
                         borderColor: '#6200EE',

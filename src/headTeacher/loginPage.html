@@ -45,7 +45,7 @@
 
                 <div class="border-amber-100 flex">
                     <div class="flex justify-end text-sm">
-                        <p class="forGetPassword font-medium text-indigo-600 hover:text-indigo-500 cursor-pointer">
+                        <p class="forGetPassword font-medium text-indigo-600 hover:text-indigo-500 cursor-pointer" onclick="forgot_password()">
                             هل نسيت كلمة المرور؟
                         </p>
                     </div>
@@ -79,7 +79,7 @@
 
         <div class="fixed inset-0 z-60 overflow-y-auto">
             <div
-                class="flex justify-center items-center min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0">
+                class="flex justify-center items-center min-h-full p-4 text-center sm:items-center sm:p-0">
                 <div
                     class="relative transform overflow-hidden rounded-large bg-white text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-lg">
                     <div class="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
@@ -106,6 +106,25 @@
     <!-- END MODAL -->
     <!-- <script src="./script.js"></script> -->
 
+    <script>
+        const modal = document.querySelector(".modal");
+        const closeIcon = document.querySelector(".closeIcon");       
+        const reject = document.querySelector(".reject");
+
+        closeIcon.addEventListener("click", () => {
+            modal.classList.add("hidden");
+        });
+        
+        reject.addEventListener("click", () => {
+            modal.classList.add("hidden");
+        });
+
+        function forgot_password()
+        {
+            modal.classList.remove("hidden");
+        }
+
+    </script>
 
 </body>
 

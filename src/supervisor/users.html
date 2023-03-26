@@ -62,7 +62,7 @@
                 <ul class="mr-6 ml-6">
                     <li class="mb-4">
                         <div dir="rtl" class="border-gray-100 rounded-[16px] w-full">
-                            <div class="colordTab py-0 px-0 bg-white rounded-2xl">
+                            <div class="colordTab py-0 px-0 bg-white rounded-2xl active">
                                 <a href="users.html">
                                     <button
                                         class="font-semibold focus:outline-none text-right flex items-center py-1 pr-2 pl-6 text-sm">
@@ -75,10 +75,30 @@
                                 </a>
                             </div>
                         </div>
+                        <div dir="rtl" class="ml-1 mr-0 mt-2">
+                            <a href="users.html" id="admin"
+                                class="coloredBut active w-44 bg-white font-semibold focus:outline-none text-right flex items-center py-1 pr-2 pl-6 text-sm rounded-[16px]">
+                                <div
+                                    class="w-10 h-10 ml-1 rounded-full border-2 border-gray-200 bg-white flex items-center justify-center">
+                                    <img class="w-6 h-6" src="../../assets/book-stack.png" alt="Avatar">
+                                </div>
+                                المعلمين
+                            </a>
+                        </div>
+                        <div dir="rtl" class="ml-1 mr-0 mt-2">
+                            <a href="students.html" id="students"
+                                class="coloredBut w-44 bg-white font-semibold focus:outline-none text-right flex items-center py-1 pr-2 pl-6 text-sm rounded-[16px]">
+                                <div
+                                    class="coloredBut w-10 h-10 ml-1 rounded-full border-2 border-gray-200 bg-white flex items-center justify-center">
+                                    <img class="w-6 h-6" src="../../assets/book-stack.png" alt="Avatar">
+                                </div>
+                                الطلاب
+                            </a>
+                        </div>
                     </li>
                     <li class="mb-4">
                         <div dir="rtl" class="border-gray-100 rounded-[16px] w-full">
-                            <div class="colordTab py-0 px-0 bg-white rounded-2xl active">
+                            <div class="colordTab py-0 px-0 bg-white rounded-2xl ">
                                 <a href="learningResourcesCenterTab.html">
                                     <button
                                         class="font-semibold focus:outline-none text-right flex items-center justify-between py-1 pr-2 pl-6 text-sm">
@@ -93,7 +113,7 @@
                             </div>
                         </div>
 
-                        <div dir="rtl" class="ml-1 mr-0 mt-2">
+                        <div dir="rtl" class="ml-1 mr-0 mt-2 hidden">
                             <a href="learningResourcesCenterTab" id="electronicLibrary"
                                 class="coloredBut active w-44 bg-white font-semibold focus:outline-none text-right flex items-center py-1 pr-2 pl-6 text-sm rounded-[16px]">
                                 <div
@@ -103,7 +123,7 @@
                                 المكتبة الالكترونة
                             </a>
                         </div>
-                        <div dir="rtl" class="ml-1 mr-0 mt-2">
+                        <div dir="rtl" class="ml-1 mr-0 mt-2 hidden">
                             <a href="learningResourcesCenterTab2.html" id="centerWorks"
                                 class="coloredBut w-44 bg-white font-semibold focus:outline-none text-right flex items-center py-1 pr-2 pl-6 text-sm rounded-[16px]">
                                 <div
@@ -145,7 +165,7 @@
                                 </a>
                             </div>
                         </div>
-                    </li>                    
+                    </li>
                     <li class="mb-4">
                         <div dir="rtl" class="border-gray-100 rounded-[16px] w-full">
                             <div class="colordTab py-0 px-0 bg-white rounded-2xl">
@@ -184,101 +204,69 @@
         <!-- Main content area -->
         <main class=" py-14 px-6 w-full mx-auto" dir="rtl" id="main_container">
 
-            <div id="component1" class="w-full items-center">
-                <div class="tools-bar md:flex justify-center gap-8">
+            <div class="tools-bar flex justify-around">
 
-                    <div class="flex">
-                        <!-- User Data -->
-                        <div class="m-1">
-                            <a href="#" id="add_book"
-                                class="px-4 py-2 text-white rounded-lg bg-dark-green border-none focus:outline-none whitespace-nowrap">
-                                اضافة كتاب
-                            </a>
-                        </div>
-
-
-                        <div class="m-1">
-                            <a href="#" id="add_book"
-                                class="px-4 py-2 text-white rounded-lg bg-dark-green border-none focus:outline-none whitespace-nowrap">
-                                اضافة قسم
-                            </a>
-                        </div>
-
-                        <select name="order_by" id="" class="bg-gray-200 rounded-md px-6 h-10">
-                            <option value="1" selected disabled>ترتيب حسب</option>
-                            <option value="1">ترتيب بحسب عنوان الكتاب</option>
-                            <option value="1">ترتيب بحسب القسم</option>
-                            <option value="1">ترتيب بحسب المؤلفين</option>
-                            <option value="1">ترتيب بحسب الصفحات</option>
-                            <option value="1">ترتيب بحسب نوع النسخة</option>
-                            <option value="1">ترتيب بحسب اللغة</option>
-                            <option value="1">ترتيب بحسب التقييم</option>
-                        </select>
-
-                    </div>                    
-                    
-                    <div class="px-4 py-0 border-2 border-gray-200 rounded-lg flex items-center m-2">
-                        <input dir="rtl" type="text" placeholder="أبحث هنا"
-                            class="pr-0 py-0 rounded-lg border-none focus:outline-none focus:border-blue-500 flex-1">
-                        <img class="m-2" src="../../assets/searchicon.png" alt="Search icon">
+                <div class="flex justify-center flex-wrap">
+                    <div id="buttonFetch"
+                        class="m-2 py-1 px-10 sm:px-5 bg-dark-green flex justify-between rounded-lg text-white focus:outline-none focus:none mt-2 cursor-pointer">
+                        <a href="add_teacher.html" class="cursor-pointer p-1" id="addAdmin">اضافة معلم</a>
                     </div>
-
+                    <div id="buttonFetchTwo"
+                        class="m-2 py-1 px-10 sm:px-5 bg-dark-green flex justify-between rounded-lg text-white focus:outline-none focus:none mt-2">
+                        <a href="#" class="cursor-pointer p-1" id="addAdminTwo">رفع ملف المعلمين</a>
+                    </div>
                 </div>
+
+                <div class="px-4 py-0 border-2 border-gray-200 rounded-lg flex items-center m-2">
+                    <input dir="rtl" type="text" placeholder="أبحث عن كتابك هنا"
+                        class="pr-0 py-0 rounded-lg border-none focus:outline-none focus:border-blue-500 flex-1">
+                    <img class="m-2" src="../../assets/searchicon.png" alt="Search icon">
+                </div>
+
             </div>
 
-            <div id="contantContainer"
-                class="block w-full justify-between md:justify-center lg:justify-center pr-2 w-full overflow-x-scroll">
+            <div id="contantContainer" class="flex w-full md:w-3/4 lg:w-4/5 justify-center pr-2 overflow-x-auto">
                 <div id="table-container">
                     <div class="container">
                         <table class="table-auto m-auto my-4">
                             <thead>
-                                <tr class="bg-gray-200 text-center bg-purple-light text-white">
-                                    <th class="px-4 py-2">العنوان الكتاب</th>
-                                    <th class="px-4 py-2">القسم</th>
-                                    <th class="px-4 py-2">اسم المؤلف</th>
-                                    <th class="px-4 py-2">عدد الصفحات</th>
-                                    <th class="px-4 py-2">توفر النسخة</th>
-                                    <th class="px-4 py-2">رقم ردمك</th>
-                                    <th class="px-4 py-2">اللغة</th>
-                                    <th class="px-4 py-2">دار النشر</th>
-                                    <th class="px-4 py-2">المشاهدات</th>
-                                    <th class="px-4 py-2">التقييم</th>
+                                <tr class="text-center bg-purple-light text-white">
+                                    <th class="px-4 py-2"> اسم المعلم</th>
+                                    <th class="px-4 py-2"> اسم المستخدم</th>
+                                    <th class="px-4 py-2">كلمة المرور</th>
                                     <th class="px-4 py-2">العمليات</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr class="text-center">
-                                    <td class="border px-4 py-2 whitespace-nowrap text-base">الادب المعاصر</td>
-                                    <td class="border px-4 py-2 whitespace-nowrap text-base">آدب</td>
-                                    <td class="border px-4 py-2 whitespace-nowrap text-base">حسن وشاح</td>
-                                    <td class="border px-4 py-2 whitespace-nowrap text-base">100</td>
-                                    <td class="border px-4 py-2 whitespace-nowrap text-base">ورقي</td>
-                                    <td class="border px-4 py-2 whitespace-nowrap text-base">ISBN548484845</td>
-                                    <td class="border px-4 py-2 whitespace-nowrap text-base">عربي</td>
-                                    <td class="border px-4 py-2 whitespace-nowrap text-base">سيبوية</td>
-                                    <td class="border px-4 py-2 whitespace-nowrap text-base">10000</td>
-                                    <td class="border px-4 py-2 whitespace-nowrap text-base">5/5</td>
+                                <tr class="text-center w-16">
+                                    <td class="border px-4 py-2 whitespace-nowrap text-base">حسن ساهر</td>
+                                    <td class="border px-4 py-2 whitespace-nowrap text-base">حسن ساهر</td>
+                                    <td class="border px-4 py-2 whitespace-nowrap text-base">141241241</td>
                                     <td class="border px-4 py-2 whitespace-nowrap text-base">
                                         <div class="flex"><button
-                                                class="bg-red-700 text-white py-1 px-2 rounded mx-1">حذف</button><button
-                                                class="bg-green text-white py-1 px-2 rounded mx-1">تصفح</button></div>
+                                                class="bg-red-700 text-white py-1 px-2 rounded mx-1" onclick="delete_item(id)">حذف</button><button
+                                                class="bg-green text-white py-1 px-2 rounded mx-1">تعديل</button></div>
                                     </td>
                                 </tr>
-                                <tr class="text-center">
-                                    <td class="border px-4 py-2 whitespace-nowrap text-base">الادب المعاصر</td>
-                                    <td class="border px-4 py-2 whitespace-nowrap text-base">آدب</td>
-                                    <td class="border px-4 py-2 whitespace-nowrap text-base">حسن وشاح</td>
-                                    <td class="border px-4 py-2 whitespace-nowrap text-base">100</td>
-                                    <td class="border px-4 py-2 whitespace-nowrap text-base">ورقي</td>
-                                    <td class="border px-4 py-2 whitespace-nowrap text-base">ISBN548484845</td>
-                                    <td class="border px-4 py-2 whitespace-nowrap text-base">عربي</td>
-                                    <td class="border px-4 py-2 whitespace-nowrap text-base">سيبوية</td>
-                                    <td class="border px-4 py-2 whitespace-nowrap text-base">10000</td>
-                                    <td class="border px-4 py-2 whitespace-nowrap text-base">5/5</td>
+                                <tr class="text-center w-16">
+                                    <td class="border px-4 py-2 whitespace-nowrap text-base">حسن ساهر</td>
+                                    <td class="border px-4 py-2 whitespace-nowrap text-base">حسن ساهر</td>
+                                    <td class="border px-4 py-2 whitespace-nowrap text-base">141241241</td>
                                     <td class="border px-4 py-2 whitespace-nowrap text-base">
                                         <div class="flex"><button
-                                                class="bg-red-700 text-white py-1 px-2 rounded mx-1">حذف</button><button
-                                                class="bg-green text-white py-1 px-2 rounded mx-1">تصفح</button></div>
+                                                class="bg-red-700 text-white py-1 px-2 rounded mx-1" onclick="delete_item(id)">حذف</button><button
+                                                class="bg-green text-white py-1 px-2 rounded mx-1">تعديل</button></div>
+                                    </td>
+                                </tr>
+                                <tr class="text-center w-16">
+                                    <td class="border px-4 py-2 whitespace-nowrap text-base">حسن ساهر</td>
+                                    <td class="border px-4 py-2 whitespace-nowrap text-base">حسن ساهر</td>
+                                    <td class="border px-4 py-2 whitespace-nowrap text-base">141241241</td>
+                                    <td class="border px-4 py-2 whitespace-nowrap text-base">
+                                        <div class="flex">
+                                            <button
+                                                class="bg-red-700 text-white py-1 px-2 rounded mx-1" onclick="delete_item(id)">حذف</button><button
+                                                class="bg-green text-white py-1 px-2 rounded mx-1">تعديل</button></div>
                                     </td>
                                 </tr>
                             </tbody>
@@ -292,6 +280,61 @@
 
     </div>
 
+        <!-- modal -->
+
+        <div class="modal relative z-50 hidden" aria-labelledby="modal-title" role="dialog" aria-modal="true">
+            <div class="fixed inset-0 bg-black-light bg-opacity-75 transition-opacity"></div>
+      
+            <div class="fixed inset-0 z-60 overflow-y-auto">
+              <div class="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0">
+                <div class="relative transform overflow-hidden rounded-large bg-white text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-lg">
+                  <div class="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
+                    <div>
+                      <p class="closeIcon text-3xl text-blue-200 cursor-pointer">x</p>
+                      <div class="mt-3 text-center sm:mt-0 sm:ml-4 flex flex-col justify-center items-center">
+                        <img src="../../assets/person2.png" alt="">
+                        <div class="mt-2">
+                          <p class="text-xl text-black-300 font-semibold mb-2">
+                            هل أنت متاكد من حذف البيانات ؟
+                          </p>
+                        </div>
+                        <div class="flex w-full justify-center gap-8">
+                          <button class="reject bg-light-gold text-white py-2 px-8 rounded-lg">
+                            لا
+                          </button>
+                          <button class="accept bg-gold text-white py-2 px-8 rounded-lg">
+                            نعم
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+    
+        <!-- end of modal  -->
+    
+        <script>
+            const modal = document.querySelector(".modal");
+            const closeIcon = document.querySelector(".closeIcon");       
+            const reject = document.querySelector(".reject");
+    
+            closeIcon.addEventListener("click", () => {
+                modal.classList.add("hidden");
+            });
+            
+            reject.addEventListener("click", () => {
+                modal.classList.add("hidden");
+            });
+    
+            function delete_item(item_id)
+            {
+                modal.classList.remove("hidden");
+            }
+    
+        </script>
 
     <img class="mx-auto h-200 w-200 absolute bottom-20 left-0 sm:bottom-0 md:bottom-0 -z-10"
         src="../../assets/Group 6.png" alt="hash">

@@ -15,17 +15,17 @@
 
     <header class="bg-white flex-wrap items-center justify-between mx-2 mb-2 rounded-b-2xl ">
         <div class="flex justify-between items-center mx-auto px-4 rounded-b-2xl w-full bg-purple-light">
-             <!-- Search Input -->
-             <div class="relative flex items-center">
+            <!-- Search Input -->
+            <div class="relative flex items-center">
                 <img src="../../assets/avtar.png" alt="My Image" class="h-10 w-10 rounded-full sm:mr-4 order-3">
                 <h1 class="text-white font-bold text-lg">عبد الله أحمد</h1>
             </div>
-                    
+
             <!-- Logo -->
             <div class="flex items-center sm:ml-4">
                 <img src="../../assets/goldenlogo.png" alt="Logo" class="h-16 w-17">
             </div>
-           
+
             <!-- User Data -->
             <div class="sm:flex flex items-end sm:items-center">
                 <div class="relative flex items-center order-2 sm:order-1">
@@ -53,14 +53,15 @@
     <!-- end of mobile control -->
 
     <div class="flex items-start">
-        
-        <div class="right-side w-4/6 sm:w-3/5 md:w-1/3 lg:w-1/6 sidebar h-screen z-30 md:z-30 bg-side-bar side_mobile hidden sm:hidden md:hidden lg:block top-0 bottom-0 right-0 overflow-y-auto gap-7 ">
+
+        <div
+            class="right-side w-3/4 sm:w-3/5 md:w-1/2 lg:w-1/3 xl:w-1/4 2xl:w-1/6 sidebar h-screen z-30 md:z-30 bg-side-bar side_mobile hidden sm:hidden md:hidden lg:block top-0 bottom-0 right-0 overflow-y-auto gap-7 ">
             <!-- Sidebar content -->
             <nav class="navBarShow mt-4 block">
                 <ul class="mr-6 ml-6">
                     <li class="mb-4">
                         <div dir="rtl" class="border-gray-100 rounded-[16px] w-full">
-                            <div class="colordTab py-0 px-0 bg-white rounded-2xl active">
+                            <div class="colordTab py-0 px-0 bg-white rounded-2xl">
                                 <a href="../LearningResourcesCenter/learningResourcesCenterTab.html">
                                     <button
                                         class="font-semibold focus:outline-none text-right flex items-center justify-between py-1 pr-2 pl-6 text-sm">
@@ -87,7 +88,7 @@
                         </div>
                         <div dir="rtl" class="ml-1 mr-0 mt-2">
                             <button id="centerWorks"
-                                class="coloredBut active w-44 bg-white font-semibold focus:outline-none text-right flex items-center py-1 pr-2 pl-6 text-sm rounded-[16px]">
+                                class="coloredBut w-44 bg-white font-semibold focus:outline-none text-right flex items-center py-1 pr-2 pl-6 text-sm rounded-[16px]">
                                 <div
                                     class="w-10 h-10 ml-1 rounded-full border-2 border-gray-200 bg-white flex items-center justify-center">
                                     <img class="w-6 h-6" src="../../assets/book-stack.png" alt="Avatar">
@@ -146,7 +147,7 @@
                     </li>
                     <li class="mb-4">
                         <div dir="rtl" class="border-gray-100 rounded-[16px] w-full">
-                            <div class="colordTab py-0 px-0 bg-white rounded-2xl">
+                            <div class="colordTab py-0 px-0 bg-white rounded-2xl active">
                                 <a href="school_details.html">
                                     <button
                                         class="font-semibold focus:outline-none text-right flex items-center py-1 pr-2 pl-6 text-sm">
@@ -162,7 +163,7 @@
                     </li>
                     <li class="mb-4">
                         <div dir="rtl" class="border-gray-100 rounded-[16px] w-full">
-                            <div class="colordTab py-0 px-0 bg-white rounded-2xl active">
+                            <div class="colordTab py-0 px-0 bg-white rounded-2xl">
                                 <a href="support.html">
                                     <button
                                         class="font-semibold focus:outline-none text-right flex items-center py-1 pr-2 pl-6 text-sm">
@@ -197,7 +198,139 @@
         <!-- Main content area -->
         <main class="py-14 px-6 w-full mx-auto" dir="rtl" id="main_container">
 
+            <div class="flex flex-col min-w-6xl items-center justify-center  px-0 sm:px-0 lg:px-0 text-right mb-20">
+                <div>
+                    <h2 class="mt-0 text-center text-2xl font-bold tracking-tight text-purple-100">
+                        بيانات المدرسة
+                    </h2>
+                </div>
+                <div class="w-full max-w-xl p-8 pb-10 shadow-xl rounded-lg">
+                    <form id="userForm" class="max-w-md mx-auto" dir="rtl" lang="ar" onsubmit="handleSubmit(event)">
+                        <div class="mb-4">
+                            <label for="name" class="font-bold">اسم المدرسة</label>
+                            <input type="text" id="name" name="name"
+                                class="mt-3 py-3 bg-gray-light t w-full rounded-md border-0 p-1.5 text-gray-900 ring-1 sm:text-sm sm:leading-6">
+                            <p id="nameError" class="text-red-100 text-xs mt-1"></p>
+                        </div>
 
+                        <div class="mb-4">
+                            <label for="ministerialSymbol" class="font-bold">الرمز الوزاري</label>
+                            <input type="text" id="ministerialSymbol" name="ministerialSymbol"
+                                class="mt-3 py-3 bg-gray-light t w-full rounded-md border-0 p-1.5 text-gray-900 ring-1 sm:text-sm sm:leading-6">
+                            <p id="ministerialSymbolError" class="text-red-100 text-xs mt-1"></p>
+                        </div>
+
+                        <div class="mb-4">
+                            <label for="email" class="font-bold">ايميل المدرسة</label>
+                            <input type="email" id="email" name="email"
+                                class="mt-3 py-3 bg-gray-light t w-full rounded-md border-0 p-1.5 text-gray-900 ring-1 sm:text-sm sm:leading-6">
+                            <p id="emailError" class="text-red-100 text-xs mt-1"></p>
+                        </div>
+                        <div class="mb-4">
+                            <label for="schoolName" class="font-bold">اسم المدرسة بالانجليزي بدون مسافات</label>
+                            <input type="text" id="schoolName" name="schoolName"
+                                class="mt-3 py-3 bg-gray-light t w-full rounded-md border-0 p-1.5 text-gray-900 ring-1 sm:text-sm sm:leading-6">
+                            <p id="schoolNameError" class="text-red-100 text-xs mt-1"></p>
+                        </div>
+
+                        <div class="flex flex-col sm:flex-row justify-between">
+                            <div class="mb-4">
+                                <label for="schoolGender" class="font-bold">بنين / بنات</label>
+                                <select id="schoolGender" name="schoolGender"
+                                    class="mt-3 py-3 bg-gray-light relative block text-right w-full rounded-md border-0 p-1.5 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:z-10 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                                    <option value="boys">بنين</option>
+                                    <option value="girls">بنات</option>
+                                    <option value="girls">مختلط</option>
+                                </select>
+                                <p id="schoolGenderError" class="text-red-100 text-xs mt-1"></p>
+                            </div>
+                            <div class="mb-4">
+                                <label for="school" class="font-bold">المرحلة الدراسية</label>
+                                <select id="school" name="schoolGender"
+                                    class="mt-3 py-3 bg-gray-light t w-full rounded-md border-0 p-1.5 text-gray-900 ring-1 sm:text-sm sm:leading-6">
+                                    <option value="elementarySchool">روضة</option>
+                                    <option value="elementarySchool">طفولة مبكرة</option>
+                                    <option value="elementarySchool">ابتدائية</option>
+                                    <option value="elementarySchool">متوسط</option>
+                                    <option value="elementarySchool">ثانوي</option>
+                                    <option value="elementarySchool">رياض اطفال</option>
+                                    <option value="elementarySchool">الاعدادية</option>
+                                </select>
+                                <p id="schoolError" class="text-red-100 text-xs mt-1"></p>
+                            </div>
+                            <div class="mb-4">
+                                <label for="schoolType" class="font-bold">نوع المدرسة </label>
+                                <select id="schoolType" name="schoolType"
+                                    class="mt-3 py-3 bg-gray-light relative block text-right w-full rounded-md border-0 p-1.5 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:z-10 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                                    <option value="governmentSchools">حكومي</option>
+                                    <option value="publicSchools">اهلي</option>
+                                </select>
+                                <p id="schoolTypeError" class="text-red-100 text-xs mt-1"></p>
+                            </div>
+                        </div>
+
+                        <div class="mb-4">
+                            <label for="studentNumber" class="font-bold">عدد الطلاب</label>
+                            <input type="number" id="studentNumber" name="studentNumber"
+                                class="mt-3 py-3 bg-gray-light t w-full rounded-md border-0 p-1.5 text-gray-900 ring-1 sm:text-sm sm:leading-6 appearance-none -webkit-appearance-none"
+                                min="0">
+                            <p id="studentNumberError" class="text-red-100 text-xs mt-1"></p>
+                        </div>
+                        <div class="mb-4">
+                            <label for="phone" class="font-bold">رقم جوال</label>
+                            <input type="tel" id="phone" name="phone"
+                                class="mt-3 py-3 bg-gray-light t w-full rounded-md border-0 p-1.5 text-gray-900 ring-1 sm:text-sm sm:leading-6">
+                            <p id="phoneError" class="text-red-100 text-xs mt-1"></p>
+                        </div>
+
+                        <div class="mb-4 relative">
+                            <label for="schoolLogo" class="font-bold">شعار المدرسة</label>
+                            <div
+                                class="flex justify-end mt-3 py-2 bg-gray-light t w-full rounded-md border-0 p-1.5 text-gray-900 ring-1 sm:text-sm sm:leading-6">
+                                <label for="schoolLogo" class="cursor-pointer rounded-md shadow-sm">
+                                    <img src="../../assets/Plus.png">
+                                </label>
+                                <input type="file" id="schoolLogo" name="image" accept="image/*"
+                                    class="hidden absolute inset-0 opacity-0 z-50">
+                            </div>
+                            <p id="schoolLogoError" class="text-red-100 text-xs mt-1"></p>
+                        </div>
+
+                        <div class="mb-4">
+                            <label for="userName" class="font-bold">اسم المستخدم</label>
+                            <input type="text" id="userName" name="userName"
+                                class="mt-3 py-3 bg-gray-light t w-full rounded-md border-0 p-1.5 text-gray-900 ring-1 sm:text-sm sm:leading-6">
+                            <p id="userNameError" class="text-red-100 text-xs mt-1"></p>
+                        </div>
+                        <div class="mb-4">
+                            <label for="password" class="font-bold">كلمة المرور الحالية</label>
+                            <input type="password" id="password" name="current-password"
+                                class="mt-3 py-3 bg-gray-light t w-full rounded-md border-0 p-1.5 text-gray-900 ring-1 sm:text-sm sm:leading-6">
+                            <p id="passwordError" class="text-red-100 text-xs mt-1"></p>
+                        </div>
+                        <div class="mb-4">
+                            <label for="confirmPassword" class="font-bold"> كلمة المرور الجديدة</label>
+                            <input type="password" id="confirmPassword" name="new-Password"
+                                class="mt-3 py-3 bg-gray-light t w-full rounded-md border-0 p-1.5 text-gray-900 ring-1 sm:text-sm sm:leading-6">
+                            <p id="confirmPasswordError" class="text-red-100 text-xs mt-1"></p>
+                        </div>
+                        <div class="mb-4">
+                            <label for="confirmPassword" class="font-bold">تاكيد كلمة المرور الجديدة</label>
+                            <input type="password" id="confirmPassword" name="confirm-new-Password"
+                                class="mt-3 py-3 bg-gray-light t w-full rounded-md border-0 p-1.5 text-gray-900 ring-1 sm:text-sm sm:leading-6">
+                            <p id="confirmPasswordError" class="text-red-100 text-xs mt-1"></p>
+                        </div>
+
+
+                        <div class="flex items-center justify-between bg-purple-light rounded-lg">
+                            <button type="submit"
+                                class="w-full hover:bg-purple-dark text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
+                                حفظ
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
 
         </main>
 

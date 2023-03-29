@@ -79,7 +79,7 @@
                     <li class="mb-4">
                         <div dir="rtl" class="border-gray-100 rounded-[16px] w-full">
                             <div class="colordTab py-0 px-0 bg-white rounded-2xl active">
-                                <a href="../Users/userTab.html">
+                                <a href="#">
                                     <button id="users"
                                         class="font-semibold focus:outline-none text-right flex items-center py-1 pr-2 pl-6 text-sm">
                                         <div
@@ -171,6 +171,22 @@
                                             <img class="w-8 h-8" src="../../assets/logout.png" alt="Avatar">
                                         </div>
                                         الاحصائيات
+                                    </button>
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="mb-4">
+                        <div dir="rtl" class="border-gray-100 rounded-[16px] w-full">
+                            <div class="colordTab py-0 px-0 bg-white rounded-2xl">
+                                <a href="school_details.html">
+                                    <button
+                                        class="font-semibold focus:outline-none text-right flex items-center py-1 pr-2 pl-6 text-sm">
+                                        <div
+                                            class="w-12 h-12 ml-2 rounded-full border-2 border-gray-200 bg-white flex items-center justify-center">
+                                            <img class="w-8 h-8" src="../../assets/customer-service.png" alt="Avatar">
+                                        </div>
+                                        بيانات المدرسة
                                     </button>
                                 </a>
                             </div>
@@ -291,6 +307,33 @@
         }
     </script>
 
+    <!-- for header  -->
+    <script>
+        // Get the first <div> element
+        const firstDiv = document.querySelector('.active');
+
+        // Get the other <div> elements
+        const otherDivs = document.querySelectorAll('.ml-1');
+
+        // Hide the other <div> elements
+        otherDivs.forEach(div => {
+            //div.style.display = 'none';
+            div.style.transition = '1.2s ease';
+        });
+
+        // Add click event listener to the first <div> element
+        firstDiv.addEventListener('click', () => {
+            // Toggle the display property of the other <div> elements
+            otherDivs.forEach(div => {
+                if (div.style.display === 'none') {
+                    div.style.display = 'block';
+                } else {
+                    div.style.display = 'none';
+                }
+            });
+        });
+    </script>
+    
 </body>
 
 </html>

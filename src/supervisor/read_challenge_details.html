@@ -203,83 +203,63 @@
 
         <!-- Main content area -->
         <main class=" py-14 px-6 w-full mx-auto" dir="rtl" id="main_container">
+            
+            <div class="rounded-lg shadow-lg p-4 bg-white w-full lg:w-5/12 mx-auto ">
 
-            <div class="tools-bar flex justify-around">
+                <form class="max-w-md mx-auto mt-4 w-full" dir="rtl" lang="ar">
 
-                <select name="order_by" id="" class="bg-gray-200 rounded-md px-6 h-10">
-                    <option value="1" selected disabled>ترتيب حسب</option>
-                    <option value="1">ترتيب على اعتماد كتب</option>
-                    <option value="1">ترتيب حسب الفصل</option>
-                    <option value="1">ترتيب حسب الصفوف</option>
-                    <option value="1">ترتيب حسب الاحدث</option>
-                </select>
+                    <div class="md:flex gap-4">
+                        <div class="mb-4">
+                            <label for="departmentName" class="font-bold">عنوان الكتاب</label>
+                            <input type="text" name="departmentName" placeholder="عنوان الكتاب "
+                                class="mt-3 py-3 bg-gray-light t w-full rounded-md border-0 p-1.5 text-gray-900 ring-1 sm:text-sm sm:leading-6">
+                        </div>
 
-                <div class="px-4 py-0 border-2 border-gray-200 rounded-lg flex items-center m-2">
-                    <input dir="rtl" type="text" placeholder="أبحث هنا"
-                        class="pr-0 py-0 rounded-lg border-none focus:outline-none focus:border-blue-500 flex-1">
-                    <img class="m-2" src="../../assets/searchicon.png" alt="Search icon">
-                </div>
-
-            </div>
-
-            <div id="contantContainer"
-                class="block w-full justify-between md:justify-center lg:justify-center pr-2 overflow-x-auto">
-                <div id="table-container">
-                    <div class="container">
-                        <table class="table-auto m-auto my-4">
-                            <thead>
-                                <tr class="text-center bg-purple-light text-white">
-                                    <th class="px-4 py-2">اسم الطالب</th>
-                                    <th class="px-4 py-2">الصف</th>
-                                    <th class="px-4 py-2">الفصل</th>
-                                    <th class="px-4 py-2">عنوان الكتاب</th>
-                                    <th class="px-4 py-2">معاينة الملخص</th>
-                                    <th class="px-4 py-2">اعتماد</th>
-                                    <th class="px-4 py-2">الكتب المعتمدة</th>
-                                    <th class="px-4 py-2"> صفحة الطالب</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr class="text-center">                                    
-                                    <td class="border px-4 py-2 whitespace-nowrap text-base">حسن ساهر</td>
-                                    <td class="border px-4 py-2 whitespace-nowrap text-base">الاول</td>
-                                    <td class="border px-4 py-2 whitespace-nowrap text-base">1/2</td>
-                                    <td class="border px-4 py-2 whitespace-nowrap text-base">رياضة الادخار</td>
-                                    <td class="border px-4 py-2 whitespace-nowrap text-base">
-                                        <a href="read_challenge_details.html" class="rounded-full h-5 w-5 text-black">
-                                            <img src="../../assets/preview.png" class="mx-auto">
-                                        </a>
-                                    </td>
-                                    <td class="border px-4 py-2 whitespace-nowrap text-base">منتظر</td>
-                                    <td class="border px-4 py-2 whitespace-nowrap text-base">20</td>                                    
-                                    <td class="border px-4 py-2 whitespace-nowrap text-base">
-                                        <div class="flex">
-                                            <a href="read_challenge_details.html" class="bg-green text-white py-1 px-2 rounded mx-1">معاينة</a>
-                                        </div>
-                                    </td>                                   
-                                </tr>
-                                <tr class="text-center">                                    
-                                    <td class="border px-4 py-2 whitespace-nowrap text-base">حسن ساهر</td>
-                                    <td class="border px-4 py-2 whitespace-nowrap text-base">الاول</td>
-                                    <td class="border px-4 py-2 whitespace-nowrap text-base">1/2</td>
-                                    <td class="border px-4 py-2 whitespace-nowrap text-base">رياضة الادخار</td>
-                                    <td class="border px-4 py-2 whitespace-nowrap text-base"> 
-                                        <a href="read_challenge_details.html" class="rounded-full h-5 w-5 text-black">
-                                            <img src="../../assets/preview.png" class="mx-auto">
-                                        </a>
-                                    </td>
-                                    <td class="border px-4 py-2 whitespace-nowrap text-base">منتظر</td>
-                                    <td class="border px-4 py-2 whitespace-nowrap text-base">20</td>                                    
-                                    <td class="border px-4 py-2 whitespace-nowrap text-base">
-                                        <div class="flex">
-                                            <a href="read_challenge_details.html" class="bg-green text-white py-1 px-2 rounded mx-1">معاينة</a>
-                                        </div>
-                                    </td>                                   
-                                </tr>
-                            </tbody>
-                        </table>
+                        <div class="mb-4">
+                            <label for="departmentName" class="font-bold">أسم المؤلف</label>
+                            <input type="text" name="departmentName" placeholder="أسم المؤلف"
+                                class="mt-3 py-3 bg-gray-light t w-full rounded-md border-0 p-1.5 text-gray-900 ring-1 sm:text-sm sm:leading-6">
+                        </div>
                     </div>
-                </div>
+
+                    <div class="md:flex gap-4">
+                        <div class="mb-4">
+                            <label for="departmentName" class="font-bold">عنوان الكتاب</label>
+                            <input type="text" name="departmentName" placeholder="عنوان الكتاب "
+                                class="mt-3 py-3 bg-gray-light t w-full rounded-md border-0 p-1.5 text-gray-900 ring-1 sm:text-sm sm:leading-6">
+                        </div>
+
+                        <div class="mb-4">
+                            <label for="departmentName" class="font-bold">أسم المؤلف</label>
+                            <input type="text" name="departmentName" placeholder="أسم المؤلف"
+                                class="mt-3 py-3 bg-gray-light t w-full rounded-md border-0 p-1.5 text-gray-900 ring-1 sm:text-sm sm:leading-6">
+                        </div>
+                    </div>
+
+
+                    <div class="flex gap-4">
+                        <textarea name="" id="" cols="30" rows="10" class="mt-3 py-3 bg-gray-light t w-full rounded-md border-0 p-1.5 text-gray-900 ring-1 sm:text-sm sm:leading-6">يتحدث الكتاب عن غزة والوباء الدي حل عليها يتحدث الكتاب عن غزة والوباء الدي حل عليها يتحدث الكتاب عن غزة والوباء الدي حل عليها يتحدث الكتاب عن غزة والوباء الدي حل عليها يتحدث الكتاب عن غزة والوباء الدي حل عليها يتحدث الكتاب عن غزة والوباء الدي حل عليها يتحدث الكتاب عن غزة والوباء الدي حل عليها يتحدث الكتاب عن غزة والوباء الدي حل عليها يتحدث الكتاب عن غزة والوباء الدي حل عليها يتحدث الكتاب عن غزة والوباء الدي حل عليها يتحدث الكتاب عن غزة والوباء الدي حل عليها يتحدث الكتاب عن غزة والوباء الدي حل عليها يتحدث الكتاب عن غزة والوباء الدي حل عليها </textarea>
+                    </div>
+
+                    <div class="flex justify-center my-5">
+                        <p>تاريخ اتمام القراءة : 12/2/2022</p>
+                    </div>
+
+                    <div class="mt-4 flex gap-4 justify-center">
+                        <div class="bg-black p-4 text-white">
+                            <p>إعتماد الملخص</p>
+                        </div>
+                        <button
+                            class="px-10 py-2 text-white rounded-lg bg-dark-green border-none focus:outline-none whitespace-nowrap">
+                            نعم
+                        </button>
+                        <button
+                            class="px-10 py-2 text-white rounded-lg bg-red-600 border-none focus:outline-none whitespace-nowrap">
+                            لا
+                        </button>
+                    </div>
+                </form>
+
             </div>
 
         </main>

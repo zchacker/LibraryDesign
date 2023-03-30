@@ -116,7 +116,7 @@
                     </li>
                     <li class="mb-4">
                         <div dir="rtl" class="border-gray-100 rounded-[16px] w-full">
-                            <div class="colordTab py-0 px-0 bg-white rounded-2xl">
+                            <div class="colordTab py-0 px-0 bg-white rounded-2xl active">
                                 <a href="activities.html">
                                     <button
                                         class="font-semibold focus:outline-none text-right flex items-center py-1 pr-2 pl-6 text-sm">
@@ -132,7 +132,7 @@
                     </li>
                     <li class="mb-4">
                         <div dir="rtl" class="border-gray-100 rounded-[16px] w-full">
-                            <div class="colordTab py-0 px-0 bg-white rounded-2xl active">
+                            <div class="colordTab py-0 px-0 bg-white rounded-2xl">
                                 <a href="readingChallenge.html">
                                     <button
                                         class="font-semibold focus:outline-none text-right flex items-center justify-between py-1 pr-2 pl-6 text-sm">
@@ -145,27 +145,7 @@
                                 </a>
                             </div>
                         </div>
-                        <div dir="rtl" class="ml-1 mr-0 mt-2">
-                            <a href="reading_challenge_approved.html" id="electronicLibrary"
-                                class="coloredBut active w-44 bg-white font-semibold focus:outline-none text-right flex items-center py-1 pr-2 pl-6 text-sm rounded-[16px]">
-                                <div
-                                    class="w-10 h-10 ml-1 rounded-full border-2 border-gray-200 bg-white flex items-center justify-center">
-                                    <img class="w-6 h-6" src="../../assets/book-stack.png" alt="Avatar">
-                                </div>
-                                قيد الانتظار
-                            </a>
-                        </div>
-                        <div dir="rtl" class="ml-1 mr-0 mt-2">
-                            <a href="reading_challenge_approved.html" id="electronicLibrary"
-                                class="coloredBut  w-44 bg-white font-semibold focus:outline-none text-right flex items-center py-1 pr-2 pl-6 text-sm rounded-[16px]">
-                                <div
-                                    class="w-10 h-10 ml-1 rounded-full border-2 border-gray-200 bg-white flex items-center justify-center">
-                                    <img class="w-6 h-6" src="../../assets/book-stack.png" alt="Avatar">
-                                </div>
-                                معتمد
-                            </a>
-                        </div>
-                    </li>
+                    </li>                    
                     <li class="mb-4">
                         <div dir="rtl" class="border-gray-100 rounded-[16px] w-full">
                             <div class="colordTab py-0 px-0 bg-white rounded-2xl">
@@ -202,117 +182,74 @@
         </div>
 
         <!-- Main content area -->
-        <main class=" py-14 px-6 w-full mx-auto" dir="rtl" id="main_container">
+        <main class=" py-14 px-6 w-full mx-auto" dir="rtl" id="main_container">        
+            <div class="rounded-lg shadow-lg p-4 bg-white md:w-5/12 mx-auto ">
 
-            <div class="tools-bar flex justify-around">
-
-                <select name="order_by" id="" class="bg-gray-200 rounded-md px-6 h-10">
-                    <option value="1" selected disabled>ترتيب حسب</option>
-                    <option value="1">ترتيب على اعتماد كتب</option>
-                    <option value="1">ترتيب حسب الفصل</option>
-                    <option value="1">ترتيب حسب الصفوف</option>
-                    <option value="1">ترتيب حسب الاحدث</option>
-                </select>
-
-                <div class="px-4 py-0 border-2 border-gray-200 rounded-lg flex items-center m-2">
-                    <input dir="rtl" type="text" placeholder="أبحث هنا"
-                        class="pr-0 py-0 rounded-lg border-none focus:outline-none focus:border-blue-500 flex-1">
-                    <img class="m-2" src="../../assets/searchicon.png" alt="Search icon">
-                </div>
-
-            </div>
-
-            <div id="contantContainer"
-                class="block w-full justify-between md:justify-center lg:justify-center pr-2 overflow-x-auto">
-                <div id="table-container">
-                    <div class="container">
-                        <table class="table-auto m-auto my-4">
-                            <thead>
-                                <tr class="text-center bg-purple-light text-white">
-                                    <th class="px-4 py-2">اسم الطالب</th>
-                                    <th class="px-4 py-2">الصف</th>
-                                    <th class="px-4 py-2">الفصل</th>
-                                    <th class="px-4 py-2">عنوان الكتاب</th>
-                                    <th class="px-4 py-2">معاينة الملخص</th>
-                                    <th class="px-4 py-2">اعتماد</th>
-                                    <th class="px-4 py-2">الكتب المعتمدة</th>
-                                    <th class="px-4 py-2"> صفحة الطالب</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr class="text-center">                                    
-                                    <td class="border px-4 py-2 whitespace-nowrap text-base">حسن ساهر</td>
-                                    <td class="border px-4 py-2 whitespace-nowrap text-base">الاول</td>
-                                    <td class="border px-4 py-2 whitespace-nowrap text-base">1/2</td>
-                                    <td class="border px-4 py-2 whitespace-nowrap text-base">رياضة الادخار</td>
-                                    <td class="border px-4 py-2 whitespace-nowrap text-base">
-                                        <a href="read_challenge_details.html" class="rounded-full h-5 w-5 text-black">
-                                            <img src="../../assets/preview.png" class="mx-auto">
-                                        </a>
-                                    </td>
-                                    <td class="border px-4 py-2 whitespace-nowrap text-base">منتظر</td>
-                                    <td class="border px-4 py-2 whitespace-nowrap text-base">20</td>                                    
-                                    <td class="border px-4 py-2 whitespace-nowrap text-base">
-                                        <div class="flex">
-                                            <a href="read_challenge_details.html" class="bg-green text-white py-1 px-2 rounded mx-1">معاينة</a>
-                                        </div>
-                                    </td>                                   
-                                </tr>
-                                <tr class="text-center">                                    
-                                    <td class="border px-4 py-2 whitespace-nowrap text-base">حسن ساهر</td>
-                                    <td class="border px-4 py-2 whitespace-nowrap text-base">الاول</td>
-                                    <td class="border px-4 py-2 whitespace-nowrap text-base">1/2</td>
-                                    <td class="border px-4 py-2 whitespace-nowrap text-base">رياضة الادخار</td>
-                                    <td class="border px-4 py-2 whitespace-nowrap text-base"> 
-                                        <a href="read_challenge_details.html" class="rounded-full h-5 w-5 text-black">
-                                            <img src="../../assets/preview.png" class="mx-auto">
-                                        </a>
-                                    </td>
-                                    <td class="border px-4 py-2 whitespace-nowrap text-base">منتظر</td>
-                                    <td class="border px-4 py-2 whitespace-nowrap text-base">20</td>                                    
-                                    <td class="border px-4 py-2 whitespace-nowrap text-base">
-                                        <div class="flex">
-                                            <a href="read_challenge_details.html" class="bg-green text-white py-1 px-2 rounded mx-1">معاينة</a>
-                                        </div>
-                                    </td>                                   
-                                </tr>
-                            </tbody>
-                        </table>
+                <form class="max-w-md mx-auto mt-4 w-full" dir="rtl" lang="ar">
+                    <div class="mb-4">
+                        <label for="departmentName" class="font-bold">عنوان النشاط</label>
+                        <input type="text" name="departmentName" placeholder="عنوان النشاط"
+                            class="mt-3 py-3 bg-gray-light t w-full rounded-md border-0 p-1.5 text-gray-900 ring-1 sm:text-sm sm:leading-6">
                     </div>
-                </div>
-            </div>
 
+                    <div class="mb-4">
+                        <label for="departmentName" class="font-bold">رابط الفديو</label>
+                        <input type="text" name="departmentName" placeholder="رابط الفديو"
+                            class="mt-3 py-3 bg-gray-light t w-full rounded-md border-0 p-1.5 text-gray-900 ring-1 sm:text-sm sm:leading-6">
+                    </div>
+
+                    <div id="uploadForm" class="bg-cover bg-center h-[250px] rounded-lg mt-4 w-full"
+                        style=" background-image: url('../../assets/Rectangle 4526.png');">
+                        <div class="relative ">
+                            <img src="../../assets/upLoadFiles.png" alt="Placeholder image" class="absolute top-[80px] right-[40%] mx-auto w-24">
+                            <input id="uploadFiles" type="file"
+                                class="absolute top-0 left-0 opacity-0 w-full h-full z-30">
+                        </div>
+                    </div>
+                    <div class="mt-4 flex gap-4 justify-center">
+                        <button
+                            class="px-10 py-2 text-white rounded-lg bg-dark-green border-none focus:outline-none whitespace-nowrap">
+                           نشر
+                        </button>
+                        <button
+                            class="px-10 py-2 text-white rounded-lg bg-orange-400 border-none focus:outline-none whitespace-nowrap">
+                            رفع
+                        </button>
+                    </div>
+                </form>
+
+            </div>
         </main>
 
 
     </div>
 
-    <!-- modal -->
-
-    <div class="modal relative z-50 hidden" aria-labelledby="modal-title" role="dialog" aria-modal="true">
-        <div class="fixed inset-0 bg-black-light bg-opacity-75 transition-opacity"></div>
-
-        <div class="fixed inset-0 z-60 overflow-y-auto">
-            <div class="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0">
-                <div
-                    class="relative transform overflow-hidden rounded-large bg-white text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-lg">
-                    <div class="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
-                        <div>
-                            <p class="closeIcon text-3xl text-blue-200 cursor-pointer">x</p>
-                            <div class="mt-3 text-center sm:mt-0 sm:ml-4 flex flex-col justify-center items-center">
-                                <img src="../../assets/person2.png" alt="">
-                                <div class="mt-2">
-                                    <p class="text-xl text-black-300 font-semibold mb-2">
-                                        هل أنت متاكد من حذف البيانات ؟
-                                    </p>
-                                </div>
-                                <div class="flex w-full justify-center gap-8">
-                                    <button class="reject bg-light-gold text-white py-2 px-8 rounded-lg">
-                                        لا
-                                    </button>
-                                    <button class="accept bg-gold text-white py-2 px-8 rounded-lg">
-                                        نعم
-                                    </button>
+        <!-- modal -->
+        <div class="modal relative z-50 hidden" aria-labelledby="modal-title" role="dialog" aria-modal="true">
+            <div class="fixed inset-0 bg-black-light bg-opacity-75 transition-opacity"></div>
+    
+            <div class="fixed inset-0 z-60 overflow-y-auto">
+                <div class="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0">
+                    <div
+                        class="relative transform overflow-hidden rounded-large bg-white text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-lg">
+                        <div class="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
+                            <div>
+                                <p class="closeIcon text-3xl text-blue-200 cursor-pointer">x</p>
+                                <div class="mt-3 text-center sm:mt-0 sm:ml-4 flex flex-col justify-center items-center">
+                                    <img src="../../assets/person2.png" alt="">
+                                    <div class="mt-2">
+                                        <p class="text-xl text-black-300 font-semibold mb-2">
+                                            هل أنت متاكد من حذف البيانات ؟
+                                        </p>
+                                    </div>
+                                    <div class="flex w-full justify-center gap-8">
+                                        <button class="reject bg-light-gold text-white py-2 px-8 rounded-lg">
+                                            لا
+                                        </button>
+                                        <button class="accept bg-gold text-white py-2 px-8 rounded-lg">
+                                            نعم
+                                        </button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -320,28 +257,26 @@
                 </div>
             </div>
         </div>
-    </div>
-
-    <!-- end of modal  -->
-
-    <script>
-        const modal = document.querySelector(".modal");
-        const closeIcon = document.querySelector(".closeIcon");
-        const reject = document.querySelector(".reject");
-
-        closeIcon.addEventListener("click", () => {
-            modal.classList.add("hidden");
-        });
-
-        reject.addEventListener("click", () => {
-            modal.classList.add("hidden");
-        });
-
-        function delete_item(item_id) {
-            modal.classList.remove("hidden");
-        }
-
-    </script>
+        <!-- end of modal  -->
+    
+        <script>
+            const modal = document.querySelector(".modal");
+            const closeIcon = document.querySelector(".closeIcon");
+            const reject = document.querySelector(".reject");
+    
+            closeIcon.addEventListener("click", () => {
+                modal.classList.add("hidden");
+            });
+    
+            reject.addEventListener("click", () => {
+                modal.classList.add("hidden");
+            });
+    
+            function delete_item(item_id) {
+                modal.classList.remove("hidden");
+            }
+    
+        </script>
 
     <img class="mx-auto h-200 w-200 absolute bottom-20 left-0 sm:bottom-0 md:bottom-0 -z-10"
         src="../../assets/Group 6.png" alt="hash">

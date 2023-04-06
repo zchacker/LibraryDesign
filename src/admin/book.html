@@ -123,6 +123,7 @@
                             </div>
                         </div>
                     </li>
+                    
                     <li class="mb-4">
                         <div dir="rtl" class="border-gray-100 rounded-[16px] w-full">
                             <div class="colordTab py-0 px-0 bg-white rounded-2xl">
@@ -141,69 +142,63 @@
             </nav>
         </div>
 
+
+
         <!-- Main content area -->
         <main class="py-14 px-6 w-full mx-auto" dir="rtl" id="main_container">
 
-            <div class="tools-bar flex justify-end">                
-
-                <div class="px-4 py-0 border-2 border-gray-200 rounded-lg flex items-center m-2">
-                    <input dir="rtl" type="text" placeholder="أبحث عن كتابك هنا"
-                        class="pr-0 py-0 rounded-lg border-none focus:outline-none focus:border-blue-500 flex-1">
-                    <img class="m-2" src="../../assets/searchicon.png" alt="Search icon">
-                </div>
-
-            </div>
-
-            <div id="contantContainer"
-                class="block w-full justify-between md:justify-center lg:justify-center pr-2 w-full overflow-x-auto">
-                <div id="table-container">
-                    <div class="container">
-                        <table class="table-auto m-auto my-4">
-                            <thead>
-                                <tr class="text-center bg-purple-light text-white">
-                                    <th class="px-4 py-2">اسم المدرسة</th>
-                                    <th class="px-4 py-2">عنوان الكتاب</th>
-                                    <th class="px-4 py-2">اسم المؤلف</th>
-                                    <th class="px-4 py-2">رقم ردمك</th>
-                                    <th class="px-4 py-2">الغة</th>
-                                    <th class="px-4 py-2">مشاهدة</th>
-                                    <th class="px-4 py-2">العمليات</th>                                    
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr class="text-center">                                    
-                                    <td class="border px-4 py-2 whitespace-nowrap text-base">الفيصلية</td>
-                                    <td class="border px-4 py-2 whitespace-nowrap text-base">البداية</td>
-                                    <td class="border px-4 py-2 whitespace-nowrap text-base">دار الحكمة</td>
-                                    <td class="border px-4 py-2 whitespace-nowrap text-base">ISBN2234567899</td>
-                                    <td class="border px-4 py-2 whitespace-nowrap text-base">العربية</td>
-                                    <td class="border px-4 py-2 whitespace-nowrap text-base">
-                                        <a href="book.html" class="bg-green text-white py-1 px-2 rounded mx-1">تصفح</a>
-                                    </td>                                    
-                                    <td class="border px-4 py-2 whitespace-nowrap text-base">
-                                        <button class="bg-red-700 text-white py-1 px-2 rounded mx-1" onclick="delete_book(1)">حدف</button>
-                                    </td>
-                                </tr>
-                                <tr class="text-center">                                    
-                                    <td class="border px-4 py-2 whitespace-nowrap text-base">الفيصلية</td>
-                                    <td class="border px-4 py-2 whitespace-nowrap text-base">البداية</td>
-                                    <td class="border px-4 py-2 whitespace-nowrap text-base">دار الحكمة</td>
-                                    <td class="border px-4 py-2 whitespace-nowrap text-base">ISBN2234567899</td>
-                                    <td class="border px-4 py-2 whitespace-nowrap text-base">العربية</td>
-                                    <td class="border px-4 py-2 whitespace-nowrap text-base">
-                                        <a href="book.html" class="bg-green text-white py-1 px-2 rounded mx-1">تصفح</a>
-                                    </td>                                    
-                                    <td class="border px-4 py-2 whitespace-nowrap text-base">
-                                        <button class="bg-red-700 text-white py-1 px-2 rounded mx-1" onclick="delete_book(1)">حدف</button>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
+            <div class="home_container_books flex flex-wrap gap-8 place-content-center">
+                <section class="bg-white py-8 ">
+                    <div class="container mx-auto px-4 flex flex-col">
+                        <div class="bg-color text-xl rounded-t-2xl m-4">
+                            <div class="text-center m-6">كتاب المكتبات الرقمية</div>
+                            <hr>
+                            <div class="text-center m-6">محتويات الكتاب</div>
+                        </div><button id="100" class="px-6 m-2 py-4 bg-white-500 text-black rounded-lg">الفصل
+                            الاول</button><button id="101"
+                            class="px-6 m-2 py-4 bg-white-500 text-black rounded-lg">الفصل الثاني</button><button
+                            id="103" class="px-6 m-2 py-4 bg-white-500 text-black rounded-lg">الفصل
+                            الثالث</button><button id="104"
+                            class="px-6 m-2 py-4 bg-white-500 text-black rounded-lg">الفصل الرابع</button><button
+                            id="105" class="px-6 m-2 py-4 bg-white-500 text-black rounded-lg">الفصل
+                            الخامس</button><button id="106"
+                            class="px-6 m-2 py-4 bg-white-500 text-black rounded-lg">الفصل السادس</button>
                     </div>
+                </section>
+                <section class="py-8">
+                    <div class="container mx-auto px-4"><img class="text-2xl font-bold mb-4"
+                            src="../../assets/bookpaper1.png"></div>
+                </section>
+                <section class="py-8">
+                    <div class="container mx-auto px-4"><img class="text-2xl font-bold mb-4"
+                            src="../../assets/bookpaper1.png"></div>
+                </section>
+            </div>
+
+            <div class="counterDiv" id="counterDiv">
+                <div class="flex items-center justify-center flex-col lg:order-last counterRemove">
+                    <div class="flex items-center justify-center gap-4 flex-row">
+                        <button class="bg-purple-900 py-4 px-4 rounded-full" id="increment-btn1">
+                            <img src="../../assets/arrow1.png">
+                        </button>
+                        <div class="flex flex-col"></div>
+                        <div class="flex rounded-2xl" style="border: 1px solid rgb(95, 34, 99);">
+                            <p class="px-2 py-0 flex items-center">10</p>
+                            <div class="text-2xl v1"></div>
+                            <p id="counterId" class="px-2 py-0 flex items-center">9</p>
+                        </div>
+                        <button class="bg-purple-900 py-4 px-4 rounded-full" id="increment-btn2">
+                            <img src="../../assets/arrow2.png">
+                        </button>
+                    </div>
+                    <button class="px-6 m-2 py-4 bg-orange-500 text-white rounded-lg">لقد أنتهيت من قراءة
+                        الكتاب</button>
                 </div>
             </div>
+
 
         </main>
+
 
 
     </div>
@@ -213,35 +208,36 @@
 
     <div class="modal relative z-50 hidden" aria-labelledby="modal-title" role="dialog" aria-modal="true">
         <div class="fixed inset-0 bg-black-light bg-opacity-75 transition-opacity"></div>
-  
+
         <div class="fixed inset-0 z-60 overflow-y-auto">
-          <div class="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0">
-            <div class="relative transform overflow-hidden rounded-large bg-white text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-lg">
-              <div class="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
-                <div>
-                  <p class="closeIcon text-3xl text-blue-200 cursor-pointer">x</p>
-                  <div class="mt-3 text-center sm:mt-0 sm:ml-4 flex flex-col justify-center items-center">
-                    <img src="../../assets/person2.png" alt="">
-                    <div class="mt-2">
-                      <p class="text-xl text-black-300 font-semibold mb-2">
-                        هل أنت متاكد من حدف بيانات الكتاب ؟
-                      </p>
+            <div class="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0">
+                <div
+                    class="relative transform overflow-hidden rounded-large bg-white text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-lg">
+                    <div class="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
+                        <div>
+                            <p class="closeIcon text-3xl text-blue-200 cursor-pointer">x</p>
+                            <div class="mt-3 text-center sm:mt-0 sm:ml-4 flex flex-col justify-center items-center">
+                                <img src="../../assets/person2.png" alt="">
+                                <div class="mt-2">
+                                    <p class="text-xl text-black-300 font-semibold mb-2">
+                                        هل أنت متاكد من حدف بيانات الكتاب ؟
+                                    </p>
+                                </div>
+                                <div class="flex w-full justify-center gap-8">
+                                    <button class="reject bg-light-gold text-white py-2 px-8 rounded-lg">
+                                        لا
+                                    </button>
+                                    <button class="accept bg-gold text-white py-2 px-8 rounded-lg">
+                                        نعم
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="flex w-full justify-center gap-8">
-                      <button class="reject bg-light-gold text-white py-2 px-8 rounded-lg">
-                        لا
-                      </button>
-                      <button class="accept bg-gold text-white py-2 px-8 rounded-lg">
-                        نعم
-                      </button>
-                    </div>
-                  </div>
                 </div>
-              </div>
             </div>
-          </div>
         </div>
-      </div>
+    </div>
 
     <!-- end of modal  -->
 
@@ -259,19 +255,18 @@
 
     <script>
         const modal = document.querySelector(".modal");
-        const closeIcon = document.querySelector(".closeIcon");       
+        const closeIcon = document.querySelector(".closeIcon");
         const reject = document.querySelector(".reject");
 
         closeIcon.addEventListener("click", () => {
             modal.classList.add("hidden");
         });
-        
+
         reject.addEventListener("click", () => {
             modal.classList.add("hidden");
         });
 
-        function delete_book(book_id)
-        {
+        function delete_book(book_id) {
             modal.classList.remove("hidden");
         }
 

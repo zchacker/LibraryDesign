@@ -61,7 +61,7 @@
                 <ul class="mr-6 ml-6">
                     <li class="mb-4">
                         <div dir="rtl" class="border-gray-100 rounded-[16px] w-full">
-                            <div class="colordTab py-0 px-0 bg-white rounded-2xl active">
+                            <div class="colordTab py-0 px-0 bg-white rounded-2xl active" id="resources">
                                 <a href="learningResourcesCenterTab.html#">
                                     <button
                                         class="font-semibold focus:outline-none text-right flex items-center justify-between py-1 pr-2 pl-6 text-sm">
@@ -76,7 +76,7 @@
                             </div>
                         </div>
 
-                        <div dir="rtl" class="ml-1 mr-0 mt-2">
+                        <div dir="rtl" class="ml-1 resources mr-0 mt-2">
                             <button id="electronicLibrary"
                                 class="coloredBut w-44 bg-white font-semibold focus:outline-none text-right flex items-center py-1 pr-2 pl-6 text-sm rounded-[16px] active">
                                 <div
@@ -86,7 +86,7 @@
                                 المكتبة الالكترونة
                             </button>
                         </div>
-                        <div dir="rtl" class="ml-1 mr-0 mt-2">
+                        <div dir="rtl" class="ml-1 resources mr-0 mt-2">
                             <a href="learningResourcesCenterTab2.html" id="centerWorks"
                                 class="coloredBut w-44 bg-white font-semibold focus:outline-none text-right flex items-center py-1 pr-2 pl-6 text-sm rounded-[16px]">
                                 <div
@@ -99,8 +99,8 @@
                     </li>
                     <li class="mb-4">
                         <div dir="rtl" class="border-gray-100 rounded-[16px] w-full">
-                            <div class="colordTab py-0 px-0 bg-white rounded-2xl">
-                                <a href="userTab1.html">
+                            <div class="colordTab py-0 px-0 bg-white rounded-2xl" id="users">
+                                <a href="javascript:void(0)">
                                     <button
                                         class="font-semibold focus:outline-none text-right flex items-center py-1 pr-2 pl-6 text-sm">
                                         <div
@@ -112,6 +112,58 @@
                                 </a>
                             </div>
                         </div>
+
+                        <div dir="rtl" class="ml-1 users mr-0 mt-2">
+                            <a href="userTab1.html" id="admin"
+                                class="coloredBut w-44 bg-white font-semibold focus:outline-none text-right flex items-center py-1 pr-2 pl-6 text-sm rounded-[16px]">
+                                <div
+                                    class="w-10 h-10 ml-1  rounded-full border-2 border-gray-200 bg-white flex items-center justify-center">
+                                    <img class="w-6 h-6" src="../../assets/book-stack.png" alt="Avatar">
+                                </div>
+                                المشرف
+                            </a>
+                        </div>
+                        <div dir="rtl" class="ml-1 users  mr-0 mt-2">
+                            <button id="students"
+                                class="coloredBut w-44 bg-white font-semibold focus:outline-none text-right flex items-center py-1 pr-2 pl-6 text-sm rounded-[16px]">
+                                <div
+                                    class="coloredBut w-10 h-10 ml-1 rounded-full border-2 border-gray-200 bg-white flex items-center justify-center">
+                                    <img class="w-6 h-6" src="../../assets/book-stack.png" alt="Avatar">
+                                </div>
+                                الطلاب
+                            </button>
+                        </div>
+                        <div dir="rtl" class="ml-1 users  mr-0 mt-2">
+                            <button id="teachers"
+                                class="coloredBut w-44 bg-white font-semibold focus:outline-none text-right flex items-center py-1 pr-2 pl-6 text-sm rounded-[16px]">
+                                <div
+                                    class="w-10 h-10 ml-1 rounded-full border-2 border-gray-200 bg-white flex items-center justify-center">
+                                    <img class="w-6 h-6" src="../../assets/book-stack.png" alt="Avatar">
+                                </div>
+                                المعلمين
+                            </button>
+                        </div>
+                        <div dir="rtl" class="ml-1 users  mr-0 mt-2">
+                            <button id="rows"
+                                class="coloredBut w-44 bg-white font-semibold focus:outline-none text-right flex items-center py-1 pr-2 pl-6 text-sm rounded-[16px]">
+                                <div
+                                    class="w-10 h-10 ml-1 rounded-full border-2 border-gray-200 bg-white flex items-center justify-center">
+                                    <img class="w-6 h-6" src="../../assets/book-stack.png" alt="Avatar">
+                                </div>
+                                صفوف
+                            </button>
+                        </div>
+                        <div dir="rtl" class="ml-1 users mr-0 mt-2">
+                            <button id="seasons"
+                                class="coloredBut w-44 bg-white font-semibold focus:outline-none text-right flex items-center py-1 pr-2 pl-6 text-sm rounded-[16px]">
+                                <div
+                                    class="w-10 h-10 ml-1 rounded-full border-2 border-gray-200 bg-white flex items-center justify-center">
+                                    <img class="w-6 h-6" src="../../assets/book-stack.png" alt="Avatar">
+                                </div>
+                                الفصول
+                            </button>
+                        </div>
+
                     </li>
                     <li class="mb-4">
                         <div dir="rtl" class="border-gray-100 rounded-[16px] w-full">
@@ -306,24 +358,35 @@
         }
     </script>
 
-    <!-- for header  -->
+    <!-- for navigation bar  -->
     <script>
         // Get the first <div> element
         const firstDiv = document.querySelector('.active');
 
         // Get the other <div> elements
-        const otherDivs = document.querySelectorAll('.ml-1');
+        const otherDivsResources = document.querySelectorAll('.resources');
+        const otherDivsUsers = document.querySelectorAll('.users');
+
+        const resources = document.getElementById("resources");
+        const users = document.getElementById("users");
 
         // Hide the other <div> elements
-        otherDivs.forEach(div => {
-            //div.style.display = 'none';
+        otherDivsResources.forEach(div => {
+            div.style.display = 'none';
             div.style.transition = '1.2s ease';
         });
 
+        otherDivsUsers.forEach(div => {
+            div.style.display = 'none';
+            div.style.transition = '1.2s ease';
+        });
+
+
         // Add click event listener to the first <div> element
-        firstDiv.addEventListener('click', () => {
+        resources.addEventListener('click', () => {
+            // Get an array of the child div elements          
             // Toggle the display property of the other <div> elements
-            otherDivs.forEach(div => {
+                otherDivsResources.forEach(div => {                
                 if (div.style.display === 'none') {
                     div.style.display = 'block';
                 } else {
@@ -331,6 +394,19 @@
                 }
             });
         });
+
+        users.addEventListener('click', () => {
+            // Get an array of the child div elements          
+            // Toggle the display property of the other <div> elements
+                otherDivsUsers.forEach(div => {                
+                if (div.style.display === 'none') {
+                    div.style.display = 'block';
+                } else {
+                    div.style.display = 'none';
+                }
+            });
+        });
+
     </script>
 
 </body>

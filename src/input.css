@@ -333,3 +333,12 @@ input {
 .centerAll{
   justify-content: center !important;
 }
+
+
+.df-sidemenu{
+  background-color: #FFFFFF;
+}
+
+.df-vrow.df-selected{
+  background-color: #E48D1C;
+}

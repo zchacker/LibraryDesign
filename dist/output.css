@@ -2358,9 +2358,19 @@ input {
   background-color: rgb(66 23 69 / var(--tw-bg-opacity));
 }
 
+.hover\:bg-\[\#5F2263\]:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(95 34 99 / var(--tw-bg-opacity));
+}
+
 .hover\:text-indigo-500:hover {
   --tw-text-opacity: 1;
   color: rgb(99 102 241 / var(--tw-text-opacity));
+}
+
+.hover\:text-white:hover {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
 .focus\:z-10:focus {
@@ -2699,6 +2709,10 @@ input {
 
   .lg\:w-1\/5 {
     width: 20%;
+  }
+
+  .lg\:w-1\/2 {
+    width: 50%;
   }
 
   .lg\:grid-cols-3 {

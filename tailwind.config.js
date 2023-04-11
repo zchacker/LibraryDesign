@@ -3,6 +3,9 @@ module.exports = {
   content: ["./src/**/*.{html,js}"],
   theme: {
     extend: {
+      fontFamily: {
+        'Cairo': ['Cairo', 'sans-serif']
+      },
       padding: {
         '12': '0.8rem',
       },

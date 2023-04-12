@@ -455,7 +455,7 @@
                                 <img src="../../assets/arrow2.png">
                             </button>
                         </div>
-                        <button class="px-6 m-2 py-4 bg-orange-500 text-white rounded-lg">لقد أنتهيت من قراءة  الكتاب</button>
+                        <button class="px-6 m-2 py-4 bg-orange-500 text-white rounded-lg" onclick="show_rate()">لقد أنتهيت من قراءة  الكتاب</button>
                     </div>
                 </div>
     
@@ -480,20 +480,30 @@
                         <div>
                             <p class="closeIcon text-3xl text-blue-200 cursor-pointer">x</p>
                             <div class="mt-3 text-center sm:mt-0 sm:ml-4 flex flex-col justify-center items-center">
-                                <img src="../../assets/person2.png" alt="">
+                                
                                 <div class="mt-2">
                                     <p class="text-xl text-black-300 font-semibold mb-2">
-                                        هل تريد المشاركة بهذا الكتاب في تحدي القراءة ؟
+                                        لقد انتهيت من قراءة الكتاب ؟
+                                    </p>
+                                </div>
+                                <div class="mt-2">
+                                    <p class="text-xl text-red-100 font-semibold mb-2">
+                                        قم الان بتقييم الكتاب
                                     </p>
                                 </div>
                                 <div class="flex w-full justify-center gap-8">
-                                    <button class="reject bg-light-gold text-white py-2 px-8 rounded-lg">
-                                        لا
-                                    </button>
-                                    <button class="accept bg-gold text-white py-2 px-8 rounded-lg">
-                                        نعم
-                                    </button>
+
+                                    <img src="../../assets/star-fill.png" alt="" onclick="send_rate(1)" />
+                                    <img src="../../assets/star.png" alt="" onclick="send_rate(2)" >
+                                    <img src="../../assets/star.png" alt="" onclick="send_rate(3)">
+                                    <img src="../../assets/star.png" alt="" onclick="send_rate(4)" >
+                                    <img src="../../assets/star.png" alt="" onclick="send_rate(5)" >
+                                                                        
                                 </div>
+
+                                <button class="reject bg-light-gold text-white py-2 px-8 mt-8 rounded-lg">
+                                    إرسال التقييم
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -519,9 +529,15 @@
             modal.classList.add("hidden");
         });
 
-        function show_confirm() {
+        function show_rate() {
             modal.classList.remove("hidden");
         }
+
+        function send_rate(rate_val)
+        {
+            console.log(rate_val);
+        }
+
     </script>
 </body>
 

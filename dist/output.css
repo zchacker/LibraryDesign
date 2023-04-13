@@ -2738,6 +2738,14 @@ input {
     width: 50%;
   }
 
+  .lg\:w-1{
+    width: 0.25rem;
+  }
+
+  .lg\:w-2\/4{
+    width: 50%;
+  }
+
   .lg\:grid-cols-3{
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }

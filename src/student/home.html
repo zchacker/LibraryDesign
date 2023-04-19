@@ -146,13 +146,16 @@
 
 
     <div class="container mx-auto px-50 flex flex-col items-center justify-center">
+       
         <div class="flex justify-center w-full">
             <div class="flex flex-col justify-center items-center w-full">
+                 <!-- mobile home nav -->
                 <div class="block md:hidden lg:hidden w-full">
 
                     <div dir="rtl" class="m-2 border-2 border-gray-100 rounded-[16px]">
                         <div class="m-1 py-0 px-0">
                             <button
+                                id="library"
                                 class="tab-link flex active items-center relative rounded-[16px] md:w-50 py-0 px-8 w-full"
                                 data-tab="tab5">
                                 <div
@@ -162,11 +165,11 @@
                                 المكتبة الالكترونية
                             </button>
                         </div>
-                        <div class="flex" data-tab="tab5">
+                        <div class="flex tab-content3" data-tab="tab5">
                             <div dir="rtl" class="m-2 rounded-[16px]">
                                 <div class="m-1 py-0 px-0">
                                     <button
-                                        class="inner-tab-link flex active items-center relative rounded-[16px] md:w-50 py-0 px-8 w-40"
+                                        class="inner-tab-link flex items-center relative rounded-[16px] md:w-50 py-0 px-8 w-40"
                                         data-tab="innerTab2">
                                         <div
                                             class="w-8 h-8 ml-2 active rounded-full bg-white flex items-center justify-center">
@@ -194,7 +197,7 @@
 
                     <div dir="rtl" class="m-2 border-2 border-gray-100 rounded-[16px]">
                         <div class="m-1 py-0 px-0">
-                            <button class="tab-link flex items-center relative rounded-[16px] md:w-50 py-0 px-8 w-full"
+                            <button id="reading" class="tab-link active flex items-center relative rounded-[16px] md:w-50 py-0 px-8 w-full"
                                 data-tab="tab6">
                                 <div
                                     class="w-8 h-8 ml-2 rounded-full border-2 border-gray-200 bg-white flex items-center justify-center">
@@ -203,7 +206,7 @@
                                 تحدي القراءة
                             </button>
                         </div>
-                        <div class="tab-content sm:flex-row" data-tab="tab6">
+                        <div class="tab-content2 sm:flex-row" data-tab="tab6">
                             <div dir="rtl" class="m-2 flex rounded-[16px]">
                                 <div class="m-1 py-0 px-0">
                                     <button
@@ -233,7 +236,7 @@
                             <div dir="rtl" class="m-2 rounded-[16px]">
                                 <div class="m-1 py-0 px-0">
                                     <button
-                                        class="inner-tab-link-2 flex active items-center relative rounded-[16px] md:w-50 py-0 px-8 w-full"
+                                        class="inner-tab-link-2 flex items-center relative rounded-[16px] md:w-50 py-0 px-8 w-full"
                                         data-tab="inner4Tab5">
                                         <div
                                             class="w-8 h-8 ml-2 rounded-full bg-white flex items-center justify-center">
@@ -248,7 +251,7 @@
 
                     <div dir="rtl" class="m-2 border-2 border-gray-100 rounded-[16px]">
                         <div class="m-1 py-0 px-0">
-                            <button class="tab-link flex items-center relative rounded-[16px] md:w-50 py-0 px-8 w-full"
+                            <button class="tab-link active flex items-center relative rounded-[16px] md:w-50 py-0 px-8 w-full"
                                 data-tab="tab3">
                                 <div
                                     class="w-8 h-8 ml-2 rounded-full border-2 border-gray-200 bg-white flex items-center justify-center">
@@ -261,7 +264,7 @@
 
                     <div dir="rtl" class="m-2 border-2 border-gray-100 rounded-[16px]">
                         <div class="m-1 py-0 px-0">
-                            <button class="tab-link flex items-center relative rounded-[16px] md:w-50 py-0 px-8 w-full"
+                            <button class="tab-link active flex items-center relative rounded-[16px] md:w-50 py-0 px-8 w-full"
                                 data-tab="tab2">
                                 <div
                                     class="w-8 h-8 ml-2 rounded-full border-2 border-gray-200 bg-white flex items-center justify-center">
@@ -274,7 +277,7 @@
 
 
                 </div>
-
+                 <!-- desktop home nav -->
                 <div class="centerAll flex-wrap hidden  md:flex justify-center m-auto">
 
                     <div dir="rtl" class="m-2 border-2 border-gray-100 rounded-[16px]">
@@ -397,6 +400,26 @@
             }
         });
     </script>
+
+    <!-- this is javascript for navigation  -->
+    <script>
+        const buttonReading = document.getElementById("reading");
+        const contentReading = document.querySelector(".tab-content2");
+        contentReading.classList.add("hidden");
+
+        buttonReading.addEventListener("click", function() {
+            contentReading.classList.toggle("hidden");
+        });
+
+        const buttonLibrary = document.getElementById("library");
+        const contentLibrary = document.querySelector(".tab-content3");
+        contentLibrary.classList.add("hidden");
+        
+        buttonLibrary.addEventListener("click", function() {
+            contentLibrary.classList.toggle("hidden");
+        });
+    </script>
+
 </body>
 
 </html>
